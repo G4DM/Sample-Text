@@ -1,0 +1,30 @@
+/* Establecer el body como un contenedor flex */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la pantalla */
+}
+
+/* El footer debe estar al final, incluso si el contenido no es suficiente */
+footer {
+  margin-top: auto; /* Empuja el footer hacia el final */
+}
+
+/* Navbar, ajusta la distancia entre los botones (inicio, contactanos,...) */
+.navbar-nav .nav-item {
+  margin-left: 32px; /* Ajusta el espacio entre los elementos */
+  margin-right: 32px;
+}
+
+/* Efecto hover en los elementos del navbar */
+.navbar-nav .nav-item .nav-link {
+  transition: all 0.2s ease-in-out; /* Transición suave */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffffff; /* Color de texto al pasar el ratón */
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+  transform: scale(1.05);
+  background-color: rgb(61, 61, 255);
+  border-radius: 4px;
+}
