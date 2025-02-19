@@ -1,0 +1,49 @@
+main {
+  text-align: center;
+  padding: 2rem;
+}
+
+#helloSection {
+  background: #f4f4f4;
+  padding: 3rem 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  background-color: rgb(61, 61, 255);
+  border-radius: 4px;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature {
+  max-width: 200px;
+}
+
+#features .row {
+  margin-top: 2rem;
+}
+
+#cta .cta-button {
+  background-color: #28a745;
+}
+
+#cta .cta-button:hover {
+  background-color: #218838;
+}
