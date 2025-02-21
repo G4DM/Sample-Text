@@ -3,9 +3,17 @@ main {
   padding: 2rem;
 }
 
-#helloSection {
+#helloSection, #features {
   background: #f4f4f4;
   padding: 3rem 1rem;
+}
+
+#info, #cta {
+  margin-top: 24px;
+}
+
+.text-block > p {
+  padding: 8px;
 }
 
 .cta-button {
@@ -42,6 +50,7 @@ main {
 
 #cta .cta-button {
   background-color: #28a745;
+  font-size: 24px;
 }
 
 #cta .cta-button:hover {
