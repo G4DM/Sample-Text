@@ -3,6 +3,10 @@ main {
   padding: 2rem;
 }
 
+.lead {
+  font-style: italic;
+}
+
 #helloSection, #features {
   background: #f4f4f4;
   padding: 3rem 1rem;
