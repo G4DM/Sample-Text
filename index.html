@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Gabriel Daniel Manea, Minda Huang" />
@@ -13,10 +13,8 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet" />
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header con el logo -->
     <header class="bg-dark py-3">
       <div class="container text-center">
@@ -51,13 +49,17 @@
               <a class="nav-link active" href="./index.html">Inicio</a>
             </li>
             <li class="nav-item ms-3">
-              <a class="nav-link" href="./pages/producto.html">Nuestro Producto</a>
+              <a class="nav-link" href="./pages/producto.html"
+                >Nuestro Producto</a
+              >
             </li>
             <li class="nav-item ms-3">
               <a class="nav-link" href="./pages/conocenos.html">Conócenos</a>
             </li>
             <li class="nav-item ms-3">
-              <a class="nav-link" href="./pages/faq.html">Preguntas Frecuentes</a>
+              <a class="nav-link" href="./pages/faq.html"
+                >Preguntas Frecuentes</a
+              >
             </li>
             <li class="nav-item ms-3">
               <a class="nav-link" href="./pages/contacto.html">Contáctanos</a>
@@ -76,24 +78,10 @@
           Toma notas sin límites, planifica tu día y accede a tu información
           desde cualquier dispositivo.
         </p>
-        <a href="./pages/producto.html" class="cta-button">Prueba la demo de Sample Text</a>
-
-        <!-- Sección de CTA -->
-        <section id="cta" class="text-center">
-          <h2>¿Quieres recibir un correo cuando esté la beta disponible?</h2>
-          <button id="show-popup" class="cta-button">Deja tu correo</button>
-        </section>
-      </section>
-
-      <!-- Modal para el formulario de correo -->
-      <div id="popup-form-container" style="display:none;">
-          <form id="emailForm">
-              <label for="userEmail">Introduce tu correo electrónico:</label>
-              <input type="email" id="userEmail" required placeholder="Introduce tu correo">
-              <button type="submit">Enviar</button>
-          </form>
-      </div>
-
+        <a href="./pages/producto.html" class="cta-button"
+          >Prueba la demo de Sample Text</a
+        >
+        
       <!-- Sección de Información -->
       <section id="info">
         <h2>Sobre Sample Text</h2>
@@ -105,50 +93,124 @@
             definitiva para centralizar tus ideas, eventos y conversaciones en
             un solo lugar.
           </p>
+          <p>
+            Sample Text combina lo mejor de Notion, Trello y Slack en una única
+            experiencia fluida y eficiente.
+          </p>
+
+          <h4>📝 Notas sin límites</h4>
+          <p>
+            Organiza tus pensamientos, proyectos y documentos en un espacio
+            diseñado para la productividad. Olvídate de perder información entre
+            múltiples apps.
+          </p>
+
+          <h4>📅 Eventos públicos y privados</h4>
+          <p>
+            Crea reuniones, conferencias o eventos colaborativos donde otros
+            puedan unirse fácilmente.
+          </p>
+
+          <h4>💬 Mensajería inteligente</h4>
+          <p>
+            Conéctate con otros usuarios a través de mensajes privados o chats
+            grupales. Comparte ideas, archivos y mantén la comunicación fluida
+            sin salir de la plataforma.
+          </p>
+
+          <h4>👥 Colaboración en equipo</h4>
+          <p>
+            Diseñada para grupos de trabajo, equipos de estudio y comunidades,
+            Sample Text te permite compartir espacios, asignar tareas y
+            gestionar proyectos con total facilidad.
+          </p>
+
+          <p>
+            <strong
+              >🚀 Simplifica tu flujo de trabajo. Conéctate mejor. Organiza sin
+              esfuerzo.</strong
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección de Características -->
+      <section id="features" class="container text-center">
+        <h2>¿Por qué elegir Sample Text?</h2>
+        <div class="row feature-grid">
+          <div class="col-md-4">
+            <h3>📝 Notas inteligentes</h3>
+            <p>
+              Organiza tus ideas con un sistema flexible de notas. Usa
+              etiquetas, categorías y enlaces para mantener todo estructurado
+              sin esfuerzo.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>📅 Gestión de eventos</h3>
+            <p>
+              Crea y únete a eventos públicos y privados. Sincroniza tu
+              calendario y recibe recordatorios para nunca perderte nada
+              importante.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>💬 Comunicación sin barreras</h3>
+            <p>
+              Mensajería privada y chats grupales para conectar con tu equipo,
+              amigos o comunidad sin salir de la plataforma.
+            </p>
+          </div>
+        </div>
+        <div class="row feature-grid">
+          <div class="col-md-4">
+            <h3>👥 Espacios colaborativos</h3>
+            <p>
+              Comparte proyectos con otros usuarios, gestiona tareas en equipo y
+              trabaja de manera organizada con herramientas inspiradas en Notion
+              y Trello.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>🔒 Seguridad y privacidad</h3>
+            <p>
+              Tu información siempre protegida con cifrado avanzado y opciones
+              de privacidad personalizadas.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>⚡ Accesible en cualquier momento</h3>
+            <p>
+              Accede a Sample Text desde cualquier dispositivo. Todo tu
+              contenido siempre sincronizado y disponible donde lo necesites.
+            </p>
+          </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; 2023 Sample Text. Todos los derechos reservados.</p>
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p>&copy; 2025 Sample Text. Todos los derechos reservados.</p>
+        <p>
+          <a href="https://www.facebook.com" class="text-white" target="_blank"
+            >Facebook</a
+          >
+          |
+          <a href="https://www.twitter.com" class="text-white" target="_blank"
+            >Twitter</a
+          >
+          |
+          <a href="https://www.instagram.com" class="text-white" target="_blank"
+            >Instagram</a
+          >
+        </p>
+      </div>
     </footer>
 
-    <script>
-      document.getElementById('show-popup').addEventListener('click', function() {
-          document.getElementById('popup-form-container').style.display = 'block';
-      });
-
-      document.getElementById('emailForm').addEventListener('submit', function(event) {
-          event.preventDefault(); // Evita el envío tradicional del formulario
-          const email = document.getElementById('userEmail').value; // Obtiene el correo ingresado
-
-          // Validación del correo
-          if (isValidEmail(email)) {
-              sendEmail(email);
-          } else {
-              alert('Por favor, introduce un correo electrónico válido.');
-          }
-      });
-
-      function isValidEmail(email) {
-          const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-          return emailRegex.test(email);
-      }
-
-      function sendEmail(email) {
-          emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-              to_email: email,
-              message: "Te has inscrito para estar notificado de la apertura de la beta de 'Sample Text'"
-          })
-          .then(function(response) {
-              console.log('Correo enviado con éxito:', response);
-              alert('Correo enviado correctamente.');
-          }, function(error) {
-              console.log('Error al enviar el correo:', error);
-              alert('Hubo un problema al enviar el correo.');
-          });
-      }
-    </script>
-</body>
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>

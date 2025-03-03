@@ -1,3 +1,5 @@
+/* main.css - Estilos globales */
+
 /* Establecer el body como un contenedor flex */
 body {
   display: flex;
@@ -9,27 +11,30 @@ body {
 /* El footer debe estar al final, incluso si el contenido no es suficiente */
 footer {
   margin-top: auto;
-}
-
-.navbar .bg-primary {
   background-color: #343a40;
+  color: white;
+  padding: 16px 0;
+  text-align: center;
 }
 
-/* Navbar, ajusta la distancia entre los botones */
+/* Navbar */
+.navbar {
+  background-color: #343a40 !important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .navbar-nav .nav-item {
-  margin-left: 32px;
-  margin-right: 32px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .navbar-nav .nav-item .nav-link {
   transition: all 0.2s ease-in-out;
+  color: #343a40;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #ffffff;
+  color: #343a40;
   text-decoration: underline;
   transform: scale(1.05);
-  background-color: rgb(61, 61, 255);
-  border-radius: 4px;
 }
- 
