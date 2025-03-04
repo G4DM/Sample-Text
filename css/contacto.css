@@ -1,0 +1,112 @@
+/* Estilos generales */
+.contact-container {
+  width: 600px; /* Ancho más estrecho */
+  margin: 40px auto;
+  padding: 16px; /* Menos relleno */
+  background: #66b0ff; /* Azul suave de fondo */
+  border-radius: 10px; /* Borde ligeramente más redondeado */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 24px; /* Tamaño reducido */
+  text-decoration: underline;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px; /* Menos espacio */
+}
+
+/* Estilos del formulario */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Menor espacio entre campos */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px; /* Tamaño más pequeño */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px; /* Menos espacio */
+}
+
+input {
+  width: 100%;
+  padding: 8px; /* Menos relleno */
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px; /* Texto más pequeño */
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+  outline: none;
+}
+
+/* Validaciones en vivo */
+.is-valid {
+  border-color: #28a745 !important;
+  background-color: #d4edda !important;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-color: #f8d7da !important;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 12px; /* Texto más pequeño */
+  margin-top: 4px;
+  display: none;
+}
+
+/* Mensajes de error visibles cuando el campo es inválido */
+input.is-invalid + .invalid-feedback {
+  display: block;
+}
+
+/* Botón de envío más estrecho y centrado */
+.contact-button {
+  width: 160px; /* Ancho más estrecho */
+  padding: 8px 20px;
+  background: #196783;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+  margin: 10px auto; /* Centra el botón */
+  display: block; /* Asegura que el margin auto funcione */
+}
+
+.contact-button:hover {
+  background-color: #0d3a47;
+  transform: scale(1.05);
+}
+
+.contact-button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .contact-container {
+    width: 90%; /* Ancho mayor en pantallas pequeñas */
+    padding: 20px;
+  }
+}

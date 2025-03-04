@@ -7,6 +7,10 @@
   padding: 64px 16px;
 }
 
+.lead {
+  font-style: italic;
+}
+
 .cta-button {
   display: inline-block;
   padding: 12px 24px;
