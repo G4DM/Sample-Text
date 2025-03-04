@@ -1,0 +1,120 @@
+/* General */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Títulos */
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  /* Texto */
+  p {
+    font-size: 1.1rem;
+  }
+  
+  /* Estilo del formulario */
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Estilo de las notas */
+  #listaNotas {
+    margin-top: 20px;
+  }
+  
+  .nota {
+    list-style-type: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .nota:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contenido de la nota */
+  .nota .contenido {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .nota .contenido.tachada {
+    text-decoration: line-through;
+    color: grey;
+  }
+  
+  /* Botones */
+  .nota .acciones button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .nota .acciones button:hover {
+    color: #007bff;
+  }
+  
+  .nota .acciones button:focus {
+    outline: none;
+  }
+  
+  /* Botones de acción */
+  .btn-success, .btn-warning, .btn-danger {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Estilo de los botones de eliminar/editar */
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  /* Estilo del footer */
+  footer {
+    background-color: #343a40;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animación para el formulario */
+  #formularioNota button {
+    transition: background-color 0.3s ease;
+  }
+  
+  #formularioNota button:hover {
+    background-color: #0069d9;
+  }
+  
