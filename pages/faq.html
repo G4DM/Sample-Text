@@ -1,17 +1,23 @@
+<!-- ===================================
+     Autor: Minda Huang
+     Fecha: 05 de marzo de 2025
+  =================================== -->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Gabriel Daniel Manea, Minda Huang" />
-    <link rel="icon" href="../assets/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="../css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Daniel Manea, Minda Huang">
+    <link rel="icon" href="../assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/faq.css">
     <title>Preguntas Frecuentes</title>
 
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet" />
+      rel="stylesheet">
   </head>
   <body>
     <!-- Header con el logo -->
@@ -22,34 +28,52 @@
             src="../assets/img/logo.png"
             alt="Imagen del logo de Sample Text"
             class="img-fluid"
-            style="max-height: 50px" />
+            style="max-height: 50px">
         </a>
       </div>
     </header>
 
     <!-- Barra de navegación (Nav) centrada -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background: linear-gradient(45deg, #007bff, #0056b3)">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item ms-3">
-              <a class="nav-link" href="../index.html">Inicio</a>
+              <a class="nav-link text-grey" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item ms-3">
-              <a class="nav-link" href="./producto.html">Nuestro Producto</a>
+              <a class="nav-link text-grey" href="./producto.html"
+                >Nuestro Producto</a
+              >
             </li>
             <li class="nav-item ms-3">
-              <a class="nav-link" href="./conocenos.html">Conócenos</a>
+              <a class="nav-link text-grey" href="./conocenos.html"
+                >Conócenos</a
+              >
             </li>
             <li class="nav-item ms-3">
-              <a class="nav-link active" href="./faq.html">Preguntas Frecuentes</a>
+              <a class="nav-link text-white active" href="./faq.html"
+                >Preguntas Frecuentes</a
+              >
             </li>
             <li class="nav-item ms-3">
-              <a class="nav-link" href="./contacto.html">Contáctanos</a>
+              <a class="nav-link text-grey" href="./contacto.html"
+                >Contáctanos</a
+              >
             </li>
           </ul>
         </div>
@@ -64,20 +88,37 @@
         <h3 class="faq-question">
           <span class="arrow">▼</span> ¿Qué es SampleText?
         </h3>
-        <p class="faq-answer">SampleText es una aplicación web diseñada para ayudar a las personas a organizar sus eventos y gestionar su tiempo de manera más eficiente. Ofrece funcionalidades como la creación de eventos, recordatorios y la posibilidad de enviar mensajes entre usuarios para facilitar la colaboración.</p>
+        <p class="faq-answer">
+          SampleText es una aplicación web diseñada para ayudar a las personas a
+          organizar sus eventos y gestionar su tiempo de manera más eficiente.
+          Ofrece funcionalidades como la creación de eventos, recordatorios y la
+          posibilidad de enviar mensajes entre usuarios para facilitar la
+          colaboración.
+        </p>
       </div>
       <!-- Añadir más preguntas -->
       <div class="faq-item">
         <h3 class="faq-question">
           <span class="arrow">▼</span> ¿Cuál es el propósito de SampleText?
         </h3>
-        <p class="faq-answer">El propósito de SampleText es brindarte herramientas sencillas y efectivas para que puedas organizar tanto eventos como tus actividades diarias. Ya sea que necesites planificar una reunión, establecer recordatorios importantes o coordinarte con amigos y colegas, nuestra aplicación está pensada para facilitarte la vida.</p>
+        <p class="faq-answer">
+          El propósito de SampleText es brindarte herramientas sencillas y
+          efectivas para que puedas organizar tanto eventos como tus actividades
+          diarias. Ya sea que necesites planificar una reunión, establecer
+          recordatorios importantes o coordinarte con amigos y colegas, nuestra
+          aplicación está pensada para facilitarte la vida.
+        </p>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">
           <span class="arrow">▼</span> ¿Vais a vender mis datos?
         </h3>
-        <p class="faq-answer">No, en SampleText nos tomamos muy en serio tu privacidad. No venderemos ni compartiremos tus datos personales con terceros. Nos comprometemos a proteger tu información y a usarla solo para ofrecerte los servicios de nuestra plataforma.</p>
+        <p class="faq-answer">
+          No, en SampleText nos tomamos muy en serio tu privacidad. No
+          venderemos ni compartiremos tus datos personales con terceros. Nos
+          comprometemos a proteger tu información y a usarla solo para ofrecerte
+          los servicios de nuestra plataforma.
+        </p>
       </div>
       <br>
       <h2>Sobre la Aplicación</h2>
@@ -85,112 +126,99 @@
         <h3 class="faq-question">
           <span class="arrow">▼</span> ¿Como hago una publicación?
         </h3>
-        <p class="faq-answer">Para hacer una publicación, simplemente ingresa a la sección de mensajería de la aplicación y selecciona el grupo o contacto con el que deseas compartir la información. Desde allí, puedes escribir tu mensaje y compartirlo con las personas que elijas.</p>
+        <p class="faq-answer">
+          Para hacer una publicación, simplemente ingresa a la sección de
+          mensajería de la aplicación y selecciona el grupo o contacto con el
+          que deseas compartir la información. Desde allí, puedes escribir tu
+          mensaje y compartirlo con las personas que elijas.
+        </p>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">
           <span class="arrow">▼</span> ¿Como hago un recordatorio?
         </h3>
-        <p class="faq-answer">Para crear un recordatorio, accede a la opción de recordatorios en el menú principal. Allí podrás elegir la fecha, hora y añadir detalles específicos para que el recordatorio se active y te avise cuando lo necesites.</p>
+        <p class="faq-answer">
+          Para crear un recordatorio, accede a la opción de recordatorios en el
+          menú principal. Allí podrás elegir la fecha, hora y añadir detalles
+          específicos para que el recordatorio se active y te avise cuando lo
+          necesites.
+        </p>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">
           <span class="arrow">▼</span> ¿Como hago un evento?
         </h3>
-        <p class="faq-answer">Para crear un evento, dirígete al calendario dentro de la aplicación. Haz clic en la fecha en la que deseas programar el evento, ingresa los detalles como la hora, ubicación y descripción, y luego guarda el evento. También podrás invitar a otros usuarios a unirse.</p>
+        <p class="faq-answer">
+          Para crear un evento, dirígete al calendario dentro de la aplicación.
+          Haz clic en la fecha en la que deseas programar el evento, ingresa los
+          detalles como la hora, ubicación y descripción, y luego guarda el
+          evento. También podrás invitar a otros usuarios a unirse.
+        </p>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">
           <span class="arrow">▼</span> ¿Como puedo añadir amigos?
         </h3>
-        <p class="faq-answer">Para añadir amigos, ve a la sección de contactos y busca a las personas que quieras agregar. Puedes buscarlas por su nombre de usuario o correo electrónico. Luego, simplemente selecciona "Añadir amigo" y espera a que acepten tu solicitud.</p>
+        <p class="faq-answer">
+          Para añadir amigos, ve a la sección de contactos y busca a las
+          personas que quieras agregar. Puedes buscarlas por su nombre de
+          usuario o correo electrónico. Luego, simplemente selecciona "Añadir
+          amigo" y espera a que acepten tu solicitud.
+        </p>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">
           <span class="arrow">▼</span> Como activar una cuenta.
         </h3>
-        <p class="faq-answer">Para activar tu cuenta, primero crea una nueva cuenta con tu correo electrónico y una contraseña segura. Después, recibirás un correo de confirmación. Haz clic en el enlace del correo para verificar tu cuenta y ¡listo! Ya podrás empezar a usar SampleText.</p>
+        <p class="faq-answer">
+          Para activar tu cuenta, primero crea una nueva cuenta con tu correo
+          electrónico y una contraseña segura. Después, recibirás un correo de
+          confirmación. Haz clic en el enlace del correo para verificar tu
+          cuenta y ¡listo! Ya podrás empezar a usar SampleText.
+        </p>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">
           <span class="arrow">▼</span> Como borrar una cuenta
         </h3>
-        <p class="faq-answer">Si deseas borrar tu cuenta, dirígete a la configuración de tu perfil y selecciona la opción de "Eliminar cuenta". Ten en cuenta que esta acción es irreversible y perderás toda la información asociada a tu cuenta.</p>
+        <p class="faq-answer">
+          Si deseas borrar tu cuenta, dirígete a la configuración de tu perfil y
+          selecciona la opción de "Eliminar cuenta". Ten en cuenta que esta
+          acción es irreversible y perderás toda la información asociada a tu
+          cuenta.
+        </p>
       </div>
     </main>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
       <div class="container">
-        <p>&copy; 2025 Sample Text. Todos los derechos reservados.</p>
         <p>
-          <a href="https://www.facebook.com" class="text-white" target="_blank">Facebook</a> |
-          <a href="https://www.twitter.com" class="text-white" target="_blank">Twitter</a> |
-          <a href="https://www.instagram.com" class="text-white" target="_blank">Instagram</a>
+          &copy; <span id="current-year"></span> Sample Text. Todos los derechos
+          reservados.
+        </p>
+        <p>
+          <a href="#" class="text-white" target="_blank">Facebook</a> |
+          <a href="#" class="text-white" target="_blank">Twitter</a> |
+          <a href="#" class="text-white" target="_blank">Instagram</a>
         </p>
       </div>
     </footer>
+
+    <!-- JavaScript para el año dinámico -->
+    <script>
+      // Obtener el elemento con el id 'current-year'
+      const currentYear = document.getElementById("current-year");
+
+      // Establecer el valor del año actual
+      currentYear.textContent = new Date().getFullYear();
+    </script>
 
     <!-- Bootstrap JS y Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-    <!--CSS y Scripts-->>
-    <style>
-      .faq-answer {
-        display: none; /* Oculta la respuesta por defecto */
-        padding: 10px;
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        margin-top: 5px;
-      }
-    
-      .faq-question {
-        cursor: pointer;
-        font-weight: bold;
-        padding: 10px;
-        background-color: #0d6efd;
-        color: #f9f9f9;
-        border: 1px solid #ccc;
-        margin: 5px 0;
-        display: flex;
-        align-items: center;
-      }
-    
-      .faq-question:hover {
-        background-color: #0d6efd;
-      }
-    
-      .arrow {
-        margin-right: 10px; /* Espacio entre la flecha y el texto */
-        transition: transform 0.3s ease; /* Animación suave para rotar */
-      }
-    
-      .faq-question.active .arrow {
-        transform: rotate(180deg); /* Rota la flecha cuando la pregunta está activa */
-      }
-    </style>
-    
-    <script>
-      // Agregar un evento de clic a todas las preguntas
-      const faqQuestions = document.querySelectorAll('.faq-question');
-      
-      faqQuestions.forEach((question) => {
-        question.addEventListener('click', function () {
-          const answer = this.nextElementSibling;
-          const arrow = this.querySelector('.arrow');
-    
-          // Toggle (mostrar/ocultar) la respuesta
-          if (answer.style.display === "none" || answer.style.display === "") {
-            answer.style.display = "block";
-            this.classList.add('active'); // Agrega la clase 'active' para rotar la flecha
-          } else {
-            answer.style.display = "none";
-            this.classList.remove('active'); // Elimina la clase 'active' para volver la flecha a su posición original
-          }
-        });
-      });
-    </script>
+    <!-- Enlace al archivo JS externo -->
+    <script src="../js/faq.js"></script>
   </body>
 </html>
-

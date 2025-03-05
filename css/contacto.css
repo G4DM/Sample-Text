@@ -1,4 +1,13 @@
-/* Estilos generales */
+/* ===================================
+*   Autor: Gabriel Daniel Manea
+*   Fecha: 05 de marzo de 2025
+*  =================================== */
+
+
+
+/* ========================================
+     Estilos generales (contact-container)
+   ======================================== */
 .contact-container {
   width: 600px; /* Ancho más estrecho */
   margin: 40px auto;
@@ -9,6 +18,9 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* ======================================
+     Título de la sección (contact-title)
+   ====================================== */
 .contact-title {
   text-align: center;
   font-size: 24px; /* Tamaño reducido */
@@ -18,7 +30,9 @@
   margin-bottom: 20px; /* Menos espacio */
 }
 
-/* Estilos del formulario */
+/* ========================================
+     Estilos del formulario (contactForm)
+   ======================================== */
 #contactForm {
   display: flex;
   flex-direction: column;
@@ -53,7 +67,9 @@ input:focus {
   outline: none;
 }
 
-/* Validaciones en vivo */
+/* ==================================================
+      Validaciones en vivo (is-valid, is-invalid)
+   ================================================== */
 .is-valid {
   border-color: #28a745 !important;
   background-color: #d4edda !important;
@@ -71,12 +87,13 @@ input:focus {
   display: none;
 }
 
-/* Mensajes de error visibles cuando el campo es inválido */
 input.is-invalid + .invalid-feedback {
   display: block;
 }
 
-/* Botón de envío más estrecho y centrado */
+/* ===================================
+   Estilos del botón (contact-button)
+   =================================== */
 .contact-button {
   width: 160px; /* Ancho más estrecho */
   padding: 8px 20px;
@@ -103,7 +120,9 @@ input.is-invalid + .invalid-feedback {
   transform: none;
 }
 
-/* Responsividad */
+/* ===================================
+    Responsividad (contact-container)
+   =================================== */
 @media (max-width: 768px) {
   .contact-container {
     width: 90%; /* Ancho mayor en pantallas pequeñas */

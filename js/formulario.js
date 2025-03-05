@@ -1,3 +1,11 @@
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 05 de marzo de 2025
+// ===================================
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
   const dni = document.getElementById("dni");
@@ -63,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Verificar si todos los campos son válidos antes de enviar el formulario
     if (form.checkValidity()) {
-      alert("Formulario válido. (Simulación de envío)");
+      alert("Se ha enviado el formulario correctamente. ¡Muchas gracias!");
       form.reset(); // Resetea el formulario tras la validación exitosa
     } else {
       alert("Hay errores en el formulario. Corrige los campos marcados.");

@@ -1,6 +1,13 @@
-/* main.css - Estilos globales */
+/* ===================================
+*   Autor: Gabriel Daniel Manea
+*   Fecha: 05 de marzo de 2025
+*  =================================== */
 
-/* Establecer el body como un contenedor flex */
+
+
+/* ===================================
+        Estilos globales (body)
+   =================================== */
 body {
   display: flex;
   flex-direction: column;
@@ -22,7 +29,9 @@ body {
   }
 }
 
-/* El footer debe estar al final, incluso si el contenido no es suficiente */
+/* ===================================
+                Footer
+   =================================== */
 footer {
   margin-top: auto;
   background-color: #343a40;
@@ -31,7 +40,9 @@ footer {
   text-align: center;
 }
 
-/* Navbar */
+/* ===================================
+                 Navbar
+   =================================== */
 .navbar {
   background-color: #343a40 !important;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);

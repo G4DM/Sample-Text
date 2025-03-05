@@ -1,0 +1,40 @@
+/* ===================================
+*   Autor: Mind Huang
+*   Fecha: 05 de marzo de 2025
+*  =================================== */
+
+
+
+/* Estilos para las preguntas frecuentes */
+.faq-answer {
+  display: none; /* Oculta la respuesta por defecto */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #0d6efd;
+  color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background-color: #0d6efd;
+}
+
+.arrow {
+  margin-right: 10px; /* Espacio entre la flecha y el texto */
+  transition: transform 0.3s ease; /* Animación suave para rotar */
+}
+
+.faq-question.active .arrow {
+  transform: rotate(180deg); /* Rota la flecha cuando la pregunta está activa */
+}

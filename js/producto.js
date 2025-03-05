@@ -1,3 +1,11 @@
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 05 de marzo de 2025
+// ===================================
+
+
+
+
 // Obtener el formulario y la lista de notas
 const formulario = document.getElementById("formularioNota");
 const listaNotas = document.getElementById("listaNotas");

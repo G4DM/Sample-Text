@@ -1,14 +1,62 @@
-/* index.css - Estilos específicos de index.html */
+/* ===================================
+*   Autor: Gabriel Daniel Manea
+*   Fecha: 05 de marzo de 2025
+*  =================================== */
 
-/* Sección de Bienvenida */
+/* ===================================
+            HEADER (LOGO) 
+   =================================== */
+header {
+  background-color: #343a40;
+  padding: 16px 0;
+}
+
+header img {
+  max-height: 50px;
+}
+
+/* ===================================
+        BARRA DE NAVEGACIÓN (NAV) 
+   =================================== */
+nav {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d1e7ff;
+}
+
+/* ===================================
+        SECCIÓN DE BIENVENIDA 
+   =================================== */
 #helloSection {
   background: #007bff;
   color: white;
   padding: 64px 16px;
+  text-align: center; /* Asegura que el texto esté centrado */
 }
 
+#info > h2 {
+  text-align: center;
+}
+
+#helloSection h1,
+#helloSection h3,
+#helloSection p {
+  padding: 8px;
+  margin: 0 auto; /* Elimina márgenes para mantener el texto centrado */
+  max-width: 800px; /* Controla el ancho para evitar que el texto se estire demasiado */
+}
+
+/* La clase 'lead' ya está estilizada, pero puede mejorar si se asegura que el párrafo no tenga márgenes extra */
 .lead {
   font-style: italic;
+  margin-bottom: 16px; /* Espaciado inferior para separar el texto */
 }
 
 .cta-button {
@@ -20,6 +68,7 @@
   border-radius: 5px;
   font-size: 19.2px;
   transition: all 0.2s ease-in-out;
+  margin-top: 20px; /* Espaciado superior para separar el botón del texto */
 }
 
 .cta-button:hover {
@@ -27,7 +76,9 @@
   transform: scale(1.1);
 }
 
-/* Sección de Información */
+/* ===================================
+        SECCIÓN DE INFORMACIÓN 
+  =================================== */
 #info {
   background: #f4f4f4;
   color: #343a40;
@@ -47,7 +98,9 @@
   color: #007bff;
 }
 
-/* Sección de Características */
+/* ===================================
+       SECCIÓN DE CARACTERÍSTICAS 
+   =================================== */
 #features {
   padding: 64px 16px;
   background: white;
@@ -69,4 +122,14 @@
   border-radius: 10px;
   background: #f8f9fa;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================
+                 FOOTER 
+   =================================== */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 16px 0;
 }
