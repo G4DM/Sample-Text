@@ -1,4 +1,4 @@
-# SampleText - Sistema de Notas 📝
+# SampleText
 Aplicación web para gestión básica de notas con almacenamiento local, mensajería en vivo y gestión de eventos mediante calendario
 
 <div align="center">
