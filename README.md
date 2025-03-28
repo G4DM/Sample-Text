@@ -1,4 +1,5 @@
 # SampleText - Sistema de Notas 📝
+Aplicación web para gestión básica de notas con almacenamiento local, mensajería en vivo y gestión de eventos mediante calendario
 
 <div align="center">
   <img src="assets/img/logo-wide.png">
@@ -7,8 +8,6 @@
 ## **Autores**: Gabriel Daniel Manea | Minda Huang  
 ## **Tipo**: Trabajo de Fin de Grado (TFG)  
 
-## 🌟 Descripción
-Aplicación web para gestión básica de notas con almacenamiento local.
 
 ## 🛠️ Tecnologías utilizadas
 ```
