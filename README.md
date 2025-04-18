@@ -6,7 +6,7 @@ Aplicación web para gestión básica de notas con almacenamiento local, mensaje
 </div>
 
 ## **Autores**: Gabriel Daniel Manea | Minda Huang  
-## **Tipo**: Trabajo de Fin de Grado (TFG)  
+## **Tipo**: Trabajo de Fin de Grado (TFG | 1º Año)  
 
 
 ## 🛠️ Tecnologías utilizadas
