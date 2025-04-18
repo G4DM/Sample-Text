@@ -2,7 +2,7 @@
 Aplicación web para gestión básica de notas con almacenamiento local, mensajería en vivo y gestión de eventos mediante calendario
 
 <div align="center">
-  <img src="assets/img/logo-wide.png">
+  <img src="/src/assets/img/logo-wide.png">
 </div>
 
 ## **Autores**: Gabriel Daniel Manea | Minda Huang  
