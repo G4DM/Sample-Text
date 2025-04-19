@@ -1,4 +1,3 @@
--- Active: 1744989689893@@127.0.0.1@3306
 DROP DATABASE IF EXISTS sample_text;
 CREATE DATABASE IF NOT EXISTS sample_text;
 USE sample_text;
