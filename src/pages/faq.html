@@ -20,6 +20,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Font Awesome 6 (Free version) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body style="opacity: 1; visibility: visible">
     <!-- Barra de navegación -->
@@ -295,20 +297,5 @@
     <!-- Main JS -->
     <script src="../js/main.js"></script>
     <script src="../js/faq.js"></script>
-    <script>
-      // Obtener el elemento con el id 'current-year'
-      const currentYear = document.getElementById("current-year");
-
-      // Establecer el valor del año actual
-      currentYear.textContent = new Date().getFullYear();
-
-      // Forzar visibilidad del contenido
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".faq-container, .faq-section").forEach((el) => {
-          el.style.opacity = "1";
-          el.style.visibility = "visible";
-        });
-      });
-    </script>
   </body>
 </html>
