@@ -1,14 +1,312 @@
-/* ===================================
-*   Autor: Minda Huang
-*   Fecha: 05 de marzo de 2025
-*  =================================== */
+/* 
+// ===================================
+// Autor: Minda Huang
+// Fecha: 05 de marzo de 2025
+// Autor de la última modificación: Gabriel Daniel Manea
+// Última fecha de modificación: 18 de Abril de 2025
+// ===================================
+*/
 
+/* Sección principal */
+.about-section {
+  padding: 3rem 0;
+}
 
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-darkest);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
 
-/* Saltaba aviso en el validador W3C */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--color-darker-gray);
+}
+
+.about-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin: 2rem 0 1.5rem;
+  position: relative;
+}
+
+.about-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-darker-gray);
+}
+
+.about-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* Tarjetas de características */
+.feature-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.feature-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-darker-gray);
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.feature-card p {
+  color: var(--color-darker-gray);
+}
+
+/* Sección del mapa */
+.location-section {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.location-section.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 550px; /* Aumentado de 400px */
+  margin: 2rem auto;
+  width: 90%; /* Ocupa más ancho */
+  max-width: 1200px; /* Límite máximo */
+}
 
 iframe {
   width: 100%;
-  height: 400px;
+  height: 100%; /* Ahora usa el 100% del contenedor */
   border: 0;
+  min-height: 550px; /* Altura mínima garantizada */
+}
+
+/* Botón CTA */
+.btn-cta {
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones */
+.animate-on-scroll {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .about-content {
+    padding: 1.5rem;
+  }
+
+  /* Mantén todos los estilos anteriores pero modifica las transiciones */
+  .feature-card {
+    padding: 1.5rem;
+    transition: all 0.4s ease-out; /* Reducido de 0.6s a 0.4s */
+  }
+
+  .animate-on-scroll {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animación más rápida */
+  }
+
+  /* Añade esta regla para precargar elementos */
+  body::after {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: var(--color-darkest);
+    z-index: 9999;
+    animation: preload 0.5s forwards;
+  }
+
+  @keyframes preload {
+    to {
+      top: 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .map-container {
+    height: 450px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-container {
+    height: 350px;
+    min-height: 350px;
+    margin: 1rem auto;
+  }
+}
+
+/* Team Cards */
+.team-cards {
+  margin: 3rem 0;
+}
+
+.team-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.team-card-header {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.team-card-body {
+  padding: 1.5rem 2rem 2rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  color: var(--color-darker-gray);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  color: var(--color-dark);
+}
+
+/* Colores específicos para redes */
+.social-links .fa-github:hover {
+  color: #333;
+}
+.social-links .fa-linkedin:hover {
+  color: #0077b5;
+}
+.social-links .fa-twitter:hover {
+  color: #1da1f2;
+}
+.social-links .fa-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-card-header {
+    padding: 1.5rem;
+  }
+  .team-avatar {
+    width: 100px;
+    height: 100px;
+  }
 }

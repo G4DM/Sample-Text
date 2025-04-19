@@ -1,135 +1,136 @@
-/* ===================================
-*   Autor: Gabriel Daniel Manea
-*   Fecha: 05 de marzo de 2025
-*  =================================== */
-
-/* ===================================
-            HEADER (LOGO) 
-   =================================== */
-header {
-  background-color: #343a40;
-  padding: 16px 0;
+/*
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 05 de marzo de 2025
+// Autor de la última modificación: Gabriel Daniel Manea
+// Última fecha de modificación: 18 de Abril de 2025
+// ===================================
+*/
+.hero-section {
+  position: relative;
+  padding: 8rem 0;
+  background: linear-gradient(135deg, var(--color-darkest) 0%, var(--color-darker) 100%);
+  color: var(--color-light);
+  overflow: hidden;
 }
 
-header img {
-  max-height: 50px;
-}
-
-/* ===================================
-        BARRA DE NAVEGACIÓN (NAV) 
-   =================================== */
-nav {
-  background: linear-gradient(45deg, #007bff, #0056b3);
-}
-
-.navbar-nav .nav-link {
-  color: white;
-  transition: color 0.3s;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #d1e7ff;
-}
-
-/* ===================================
-        SECCIÓN DE BIENVENIDA 
-   =================================== */
-#helloSection {
-  background: #007bff;
-  color: white;
-  padding: 64px 16px;
-  text-align: center; /* Asegura que el texto esté centrado */
-}
-
-#info > h2 {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   text-align: center;
 }
 
-#helloSection h1,
-#helloSection h3,
-#helloSection p {
-  padding: 8px;
-  margin: 0 auto; /* Elimina márgenes para mantener el texto centrado */
-  max-width: 800px; /* Controla el ancho para evitar que el texto se estire demasiado */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
 }
 
-/* La clase 'lead' ya está estilizada, pero puede mejorar si se asegura que el párrafo no tenga márgenes extra */
-.lead {
-  font-style: italic;
-  margin-bottom: 16px; /* Espaciado inferior para separar el texto */
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--color-light-gray);
 }
 
-.cta-button {
+.hero-lead {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: var(--color-gray);
+}
+
+.hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.info-section {
+  padding: 6rem 0;
+  background-color: var(--color-light);
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.features-section {
+  padding: 6rem 0;
+  background-color: var(--color-light-gray);
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem; /* Añadido margen inferior */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   display: inline-block;
-  padding: 12px 24px;
-  background: #002e5f;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 19.2px;
-  transition: all 0.2s ease-in-out;
-  margin-top: 20px; /* Espaciado superior para separar el botón del texto */
+  transition: transform 0.3s ease;
 }
 
-.cta-button:hover {
-  background: #003d80;
+.feature-card:hover .feature-icon {
   transform: scale(1.1);
 }
 
-/* ===================================
-        SECCIÓN DE INFORMACIÓN 
-  =================================== */
-#info {
-  background: #f4f4f4;
-  color: #343a40;
-  padding: 16px;
-  border-radius: 10px;
-  margin: 32px auto;
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+  position: relative;
+  padding-bottom: 0.5rem;
 }
 
-.text-block {
-  padding: 16px;
-  max-width: 800px;
-  margin: auto;
-  text-align: left;
+.feature-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-darker-gray);
 }
 
-.text-block h4 {
-  color: #007bff;
+/* Responsive */
+@media (max-width: 992px) {
+  .feature-card {
+    margin-bottom: 1rem;
+  }
 }
 
-/* ===================================
-       SECCIÓN DE CARACTERÍSTICAS 
-   =================================== */
-#features {
-  padding: 64px 16px;
-  background: white;
-}
+@media (max-width: 768px) {
+  .feature-card {
+    margin-bottom: 1.5rem;
+  }
 
-.feature-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  padding: 8px;
-  color: #343a40;
-}
-
-.feature {
-  max-width: 300px;
-  text-align: center;
-  padding: 24px;
-  border-radius: 10px;
-  background: #f8f9fa;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* ===================================
-                 FOOTER 
-   =================================== */
-footer {
-  background-color: #343a40;
-  color: white;
-  text-align: center;
-  padding: 16px 0;
+  .features-section {
+    padding: 4rem 0;
+  }
 }

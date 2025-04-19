@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const validateField = (input, regex, errorMsg) => {
     const isValid = regex.test(input.value.trim());
     if (isValid) {
-      input.classList.remove('is-invalid');
-      input.classList.add('is-valid');
-      input.setCustomValidity('');
+      input.classList.remove("is-invalid");
+      input.classList.add("is-valid");
+      input.setCustomValidity("");
     } else {
-      input.classList.remove('is-valid');
-      input.classList.add('is-invalid');
+      input.classList.remove("is-valid");
+      input.classList.add("is-invalid");
       input.setCustomValidity(errorMsg);
     }
   };
@@ -43,13 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
   edad.addEventListener("input", function () {
     const edadNum = parseInt(edad.value.trim(), 10);
     if (isNaN(edadNum) || edadNum <= 17 || edadNum > 120) {
-      edad.classList.remove('is-valid');
-      edad.classList.add('is-invalid');
+      edad.classList.remove("is-valid");
+      edad.classList.add("is-invalid");
       edad.setCustomValidity("La edad debe estar entre 18 y 120.");
     } else {
-      edad.classList.remove('is-invalid');
-      edad.classList.add('is-valid');
-      edad.setCustomValidity('');
+      edad.classList.remove("is-invalid");
+      edad.classList.add("is-valid");
+      edad.setCustomValidity("");
     }
   });
 
@@ -67,27 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Validación para el mensaje (no puede estar vacío)
   mensaje.addEventListener("input", function () {
-    if (mensaje.value.trim() === '') {
-      mensaje.classList.remove('is-valid');
-      mensaje.classList.add('is-invalid');
+    if (mensaje.value.trim() === "") {
+      mensaje.classList.remove("is-valid");
+      mensaje.classList.add("is-invalid");
       mensaje.setCustomValidity("El mensaje no puede estar vacío.");
     } else {
-      mensaje.classList.remove('is-invalid');
-      mensaje.classList.add('is-valid');
-      mensaje.setCustomValidity('');
+      mensaje.classList.remove("is-invalid");
+      mensaje.classList.add("is-valid");
+      mensaje.setCustomValidity("");
     }
   });
-
-  // // Evento de envío del formulario
-  // form.addEventListener("submit", function (event) {
-  //   event.preventDefault(); // Evitar el envío real del formulario
-
-  //   // Verificar si todos los campos son válidos antes de enviar el formulario
-  //   if (form.checkValidity()) {
-  //     alert("Se ha enviado el formulario correctamente. ¡Muchas gracias!");
-  //     form.reset(); // Resetea el formulario tras la validación exitosa
-  //   } else {
-  //     alert("Hay errores en el formulario. Corrige los campos marcados.");
-  //   }
-  // });
 });

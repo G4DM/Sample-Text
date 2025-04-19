@@ -1,9 +1,11 @@
-<!-- ===================================
-     Autor: Gabriel Daniel Manea
-     Fecha de creación: 05 de Marzo de 2025
-     Autor de la última modificación: Gabriel Daniel Manea
-     Última fecha de modificación: 18 de Abril de 2025
-  =================================== -->
+<!-- 
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 05 de marzo de 2025
+// Autor de la última modificación: Gabriel Daniel Manea
+// Última fecha de modificación: 18 de Abril de 2025
+// ===================================
+-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -17,185 +19,288 @@
     <title>Sample Text</title>
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- Font Awesome 6 (Free version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
-    <!-- Header con el logo -->
-    <header class="bg-dark py-3">
-      <div class="container text-center">
-        <a href="./index.html">
-          <img
-            src="./src/assets/img/logo.png"
-            alt="Imagen del logo de Sample Text"
-            class="img-fluid"
-            style="max-height: 50px" />
-        </a>
+    <!-- Barra de navegación mejorada -->
+    <header class="header bg-darkest sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg px-0">
+          <div class="container-fluid">
+            <a href="./index.html" class="navbar-brand d-flex align-items-center">
+              <img src="./src/assets/img/logo.png" alt="Sample Text Logo" class="logo-img me-2" style="height: 40px" />
+              <span class="brand-text d-none d-sm-inline">Sample Text</span>
+            </a>
+
+            <button
+              class="navbar-toggler custom-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="./index.html">
+                    <i class="fas fa-home d-lg-none me-2"></i>Inicio
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./src/pages/producto.html">
+                    <i class="fas fa-box-open d-lg-none me-2"></i>Producto
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./src/pages/conocenos.html">
+                    <i class="fas fa-users d-lg-none me-2"></i>Conócenos
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./src/pages/faq.html">
+                    <i class="fas fa-question-circle d-lg-none me-2"></i>FAQ
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./src/pages/contacto.html">
+                    <i class="fas fa-envelope d-lg-none me-2"></i>Contacto
+                  </a>
+                </li>
+              </ul>
+
+              <div class="d-flex">
+                <a href="./src/pages/producto.html" class="btn btn-primary btn-cta">
+                  <span class="d-none d-md-inline">Probar Demo</span>
+                  <span class="d-md-none">Demo</span>
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <!-- Barra de navegación (Nav) centrada -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark"
-      style="background: linear-gradient(45deg, #007bff, #0056b3)">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item ms-3">
-              <a class="nav-link text-white active" href="./index.html">Inicio</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./src/pages/producto.html">Nuestro Producto</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./src/pages/conocenos.html">Conócenos</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./src/pages/faq.html">Preguntas Frecuentes</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./src/pages/contacto.html">Contáctanos</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
     <main>
       <!-- Sección de Bienvenida -->
-      <section id="helloSection" class="text-center">
-        <h1>Sample Text</h1>
-        <h3>Organiza. Conéctate. Colabora.</h3>
-        <p class="lead">
-          Toma notas sin límites, planifica tu día y accede a tu información desde cualquier
-          dispositivo.
-        </p>
-        <a href="./src/pages/producto.html" class="cta-button">Prueba la demo de Sample Text</a>
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Sample Text</h1>
+          <h3 class="hero-subtitle">Organiza. Conéctate. Colabora.</h3>
+          <p class="hero-lead">
+            Toma notas sin límites, planifica tu día y accede a tu información desde cualquier dispositivo.
+          </p>
+          <a href="./src/pages/producto.html" class="cta-button btn btn-primary btn-lg"
+            >Prueba la demo de Sample Text</a
+          >
+        </div>
+        <div class="hero-pattern"></div>
       </section>
 
       <!-- Sección de Información -->
-      <section id="info">
-        <h2>Sobre Sample Text</h2>
-        <div class="text-block">
-          <h3>Tu espacio para organizar, colaborar y comunicar</h3>
-          <p>
-            En un mundo donde la información se dispersa entre demasiadas herramientas,
-            <strong>Sample Text</strong> surge como la solución definitiva para centralizar tus
-            ideas, eventos y conversaciones en un solo lugar.
-          </p>
-          <p>
-            Sample Text combina lo mejor de Notion, Trello y Slack en una única experiencia fluida y
-            eficiente.
-          </p>
+      <section id="info" class="info-section">
+        <div class="container">
+          <h2 class="section-title">Sobre Sample Text</h2>
+          <div class="info-card">
+            <h3>Tu espacio para organizar, colaborar y comunicar</h3>
+            <p>
+              En un mundo donde la información se dispersa entre demasiadas herramientas,
+              <strong>Sample Text</strong> surge como la solución definitiva para centralizar tus ideas, eventos y
+              conversaciones en un solo lugar.
+            </p>
+            <p>Sample Text combina lo mejor de Notion, Trello y Slack en una única experiencia fluida y eficiente.</p>
 
-          <h4>📝 Notas sin límites</h4>
-          <p>
-            Organiza tus pensamientos, proyectos y documentos en un espacio diseñado para la
-            productividad. Olvídate de perder información entre múltiples apps.
-          </p>
+            <div class="feature-item">
+              <h4>📝 Notas sin límites</h4>
+              <p>
+                Organiza tus pensamientos, proyectos y documentos en un espacio diseñado para la productividad. Olvídate
+                de perder información entre múltiples apps.
+              </p>
+            </div>
 
-          <h4>📅 Eventos públicos y privados</h4>
-          <p>
-            Crea reuniones, conferencias o eventos colaborativos donde otros puedan unirse
-            fácilmente.
-          </p>
+            <div class="feature-item">
+              <h4>📅 Eventos públicos y privados</h4>
+              <p>Crea reuniones, conferencias o eventos colaborativos donde otros puedan unirse fácilmente.</p>
+            </div>
 
-          <h4>💬 Mensajería inteligente</h4>
-          <p>
-            Conéctate con otros usuarios a través de mensajes privados o chats grupales. Comparte
-            ideas, archivos y mantén la comunicación fluida sin salir de la plataforma.
-          </p>
+            <div class="feature-item">
+              <h4>💬 Mensajería inteligente</h4>
+              <p>
+                Conéctate con otros usuarios a través de mensajes privados o chats grupales. Comparte ideas, archivos y
+                mantén la comunicación fluida sin salir de la plataforma.
+              </p>
+            </div>
 
-          <h4>👥 Colaboración en equipo</h4>
-          <p>
-            Diseñada para grupos de trabajo, equipos de estudio y comunidades, Sample Text te
-            permite compartir espacios, asignar tareas y gestionar proyectos con total facilidad.
-          </p>
+            <div class="feature-item">
+              <h4>👥 Colaboración en equipo</h4>
+              <p>
+                Diseñada para grupos de trabajo, equipos de estudio y comunidades, Sample Text te permite compartir
+                espacios, asignar tareas y gestionar proyectos con total facilidad.
+              </p>
+            </div>
 
-          <p>
-            <strong
-              >🚀 Simplifica tu flujo de trabajo. Conéctate mejor. Organiza sin esfuerzo.</strong
-            >
-          </p>
+            <div class="highlight-text">
+              <p>
+                <strong>🚀 Simplifica tu flujo de trabajo. Conéctate mejor. Organiza sin esfuerzo.</strong>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Sección de Características -->
-      <section id="features" class="container text-center">
-        <h2>¿Por qué elegir Sample Text?</h2>
-        <div class="row feature-grid">
-          <div class="col-md-4">
-            <h3>📝 Notas inteligentes</h3>
-            <p>
-              Organiza tus ideas con un sistema flexible de notas. Usa etiquetas, categorías y
-              enlaces para mantener todo estructurado sin esfuerzo.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h3>📅 Gestión de eventos</h3>
-            <p>
-              Crea y únete a eventos públicos y privados. Sincroniza tu calendario y recibe
-              recordatorios para nunca perderte nada importante.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h3>💬 Comunicación sin barreras</h3>
-            <p>
-              Mensajería privada y chats grupales para conectar con tu equipo, amigos o comunidad
-              sin salir de la plataforma.
-            </p>
-          </div>
-        </div>
-        <div class="row feature-grid">
-          <div class="col-md-4">
-            <h3>👥 Espacios colaborativos</h3>
-            <p>
-              Comparte proyectos con otros usuarios, gestiona tareas en equipo y trabaja de manera
-              organizada con herramientas inspiradas en Notion y Trello.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h3>🔒 Seguridad y privacidad</h3>
-            <p>
-              Tu información siempre protegida con cifrado avanzado y opciones de privacidad
-              personalizadas.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h3>⚡ Accesible en cualquier momento</h3>
-            <p>
-              Accede a Sample Text desde cualquier dispositivo. Todo tu contenido siempre
-              sincronizado y disponible donde lo necesites.
-            </p>
+      <section id="features" class="features-section">
+        <div class="container">
+          <h2 class="section-title text-center mb-5">¿Por qué elegir Sample Text?</h2>
+          <div class="row g-4">
+            <!-- Añadido g-4 para separación vertical -->
+            <div class="col-md-6 col-lg-4">
+              <!-- Cambiado a col-md-6 para mejor responsive -->
+              <div class="feature-card h-100">
+                <div class="feature-icon">📝</div>
+                <h3>Notas inteligentes</h3>
+                <p>
+                  Organiza tus ideas con un sistema flexible de notas. Usa etiquetas, categorías y enlaces para mantener
+                  todo estructurado sin esfuerzo.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">📅</div>
+                <h3>Gestión de eventos</h3>
+                <p>
+                  Crea y únete a eventos públicos y privados. Sincroniza tu calendario y recibe recordatorios para nunca
+                  perderte nada importante.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">💬</div>
+                <h3>Comunicación sin barreras</h3>
+                <p>
+                  Mensajería privada y chats grupales para conectar con tu equipo, amigos o comunidad sin salir de la
+                  plataforma.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">👥</div>
+                <h3>Espacios colaborativos</h3>
+                <p>
+                  Comparte proyectos con otros usuarios, gestiona tareas en equipo y trabaja de manera organizada con
+                  herramientas inspiradas en Notion y Trello.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">🔒</div>
+                <h3>Seguridad y privacidad</h3>
+                <p>Tu información siempre protegida con cifrado avanzado y opciones de privacidad personalizadas.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon">⚡</div>
+                <h3>Accesible en cualquier momento</h3>
+                <p>
+                  Accede a Sample Text desde cualquier dispositivo. Todo tu contenido siempre sincronizado y disponible
+                  donde lo necesites.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-      <div class="container">
-        <p>&copy; <span id="current-year"></span> Sample Text. Todos los derechos reservados.</p>
-        <p>
-          <a href="#" class="text-white" target="_blank">Facebook</a> |
-          <a href="#" class="text-white" target="_blank">Twitter</a> |
-          <a href="#" class="text-white" target="_blank">Instagram</a>
-        </p>
+    <footer class="footer bg-212529 text-white">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="footer-brand mb-3">
+              <img
+                src="./src/assets/img/logo-wide.png"
+                alt="Sample Text Logo"
+                class="img-fluid footer-logo rounded-circle shadow-lg"
+                style="max-height: 80px; width: auto; border: 3px solid rgba(255, 255, 255, 0.2)" />
+            </div>
+            <p class="footer-text mb-4 mx-auto" style="max-width: 600px">
+              La solución todo en uno para organizar tus ideas, eventos y comunicaciones.
+            </p>
+            <div style="position: relative; z-index: 1000; display: inline-block">
+              <a
+                href="./src/pages/conocenos.html"
+                class="btn btn-outline-light btn-sm"
+                style="position: relative; z-index: 1001">
+                Síguenos en Redes Sociales
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title mb-4">Enlaces</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2"><a href="./index.html" class="footer-link">Inicio</a></li>
+              <li class="mb-2"><a href="./src/pages/producto.html" class="footer-link">Producto</a></li>
+              <li class="mb-2"><a href="./src/pages/conocenos.html" class="footer-link">Conócenos</a></li>
+              <li class="mb-2"><a href="./src/pages/faq.html" class="footer-link">FAQ</a></li>
+              <li><a href="./src/pages/contacto.html" class="footer-link">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-title mb-4">Contacto</h5>
+            <ul class="footer-contact list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:info@sampletext.com" class="footer-link">info@sampletext.com</a>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-phone-alt me-2"></i>
+                <a href="tel:+123456789" class="footer-link">+951 50 10 70</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>
+                <span>Carrer de la Corona D'Arago, 1, 46900 Torrent, Valencia</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider my-4 mx-auto" style="max-width: 80%" />
+
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <p class="mb-2">&copy; <span id="current-year"></span> Sample Text. Todos los derechos reservados.</p>
+            <p class="mb-0">
+              Hecho con <i class="fa-solid fa-heart text-danger"></i> por Gabriel Daniel Manea & Minda Huang
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <!-- JavaScript para el año dinámico -->
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Main JS -->
+    <script src="./src/js/main.js"></script>
     <script>
       // Obtener el elemento con el id 'current-year'
       const currentYear = document.getElementById("current-year");
@@ -203,9 +308,5 @@
       // Establecer el valor del año actual
       currentYear.textContent = new Date().getFullYear();
     </script>
-
-    <!-- Bootstrap JS y Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

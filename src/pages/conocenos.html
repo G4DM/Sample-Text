@@ -1,198 +1,320 @@
-<!-- ===================================
-     Autor: Minda Huang
-     Fecha: 05 de marzo de 2025
-  =================================== -->
-
+<!-- 
+// ===================================
+// Autor: Minda Huang
+// Fecha: 05 de marzo de 2025
+// Autor de la última modificación: Gabriel Daniel Manea
+// Última fecha de modificación: 18 de Abril de 2025
+// ===================================
+ -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Gabriel Daniel Manea, Minda Huang">
-    <link rel="icon" href="../assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/conocenos.css">
-    <link rel="stylesheet" href="../css/conocenos.css">
-    <title>Conócenos</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gabriel Daniel Manea, Minda Huang" />
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/conocenos.css" />
+    <title>Conócenos | Sample Text</title>
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome 6 (Free version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <!-- Header con el logo -->
-    <header class="bg-dark py-3">
-      <div class="container text-center">
-        <a href="../index.html">
-          <img
-            src="../assets/img/logo.png"
-            alt="Imagen del logo de Sample Text"
-            class="img-fluid"
-            style="max-height: 50px">
-        </a>
+    <!-- Barra de navegación -->
+    <header class="header bg-darkest sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg px-0">
+          <div class="container-fluid">
+            <a href="../../index.html" class="navbar-brand d-flex align-items-center">
+              <img src="../assets/img/logo.png" alt="Sample Text Logo" class="logo-img me-2" style="height: 40px" />
+              <span class="brand-text d-none d-sm-inline">Sample Text</span>
+            </a>
+
+            <button
+              class="navbar-toggler custom-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="../../index.html"> <i class="fas fa-home d-lg-none me-2"></i>Inicio </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./producto.html">
+                    <i class="fas fa-box-open d-lg-none me-2"></i>Producto
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" href="./conocenos.html">
+                    <i class="fas fa-users d-lg-none me-2"></i>Conócenos
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./faq.html"> <i class="fas fa-question-circle d-lg-none me-2"></i>FAQ </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./contacto.html">
+                    <i class="fas fa-envelope d-lg-none me-2"></i>Contacto
+                  </a>
+                </li>
+              </ul>
+
+              <div class="d-flex">
+                <a href="./producto.html" class="btn btn-primary btn-cta">
+                  <span class="d-none d-md-inline">Probar Demo</span>
+                  <span class="d-md-none">Demo</span>
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <!-- Barra de navegación (Nav) centrada -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark"
-      style="background: linear-gradient(45deg, #007bff, #0056b3)">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./producto.html"
-                >Nuestro Producto</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-white active" href="./conocenos.html"
-                >Conócenos</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./faq.html"
-                >Preguntas Frecuentes</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./contacto.html"
-                >Contáctanos</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
     <!-- Contenido principal -->
     <main class="container py-5">
-      <div class="text-center">
-        <h1 class="fw-bold text-primary">Conócenos</h1>
-        <p class="lead text-muted">Descubre quiénes somos y nuestra misión.</p>
-      </div>
+      <section class="about-section">
+        <div class="text-center mb-5">
+          <h1 class="section-title animate-on-scroll">Conócenos</h1>
+          <p class="lead text-muted animate-on-scroll" data-delay="0.2">Descubre quiénes somos y nuestra misión.</p>
+        </div>
 
-      <div class="row mt-4">
-        <div class="col-lg-8 mx-auto">
-          <p>
-            Bienvenidos a <strong>SampleText</strong>, una aplicación innovadora
-            creada para ayudarte a organizar tu día a día de manera eficiente y
-            sencilla. Fundada en 2025, nuestra misión es proporcionarte una
-            herramienta integral que te permita gestionar tu tiempo, eventos y
-            comunicaciones personales en un solo lugar.
-          </p>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="about-content animate-on-scroll" data-delay="0.4">
+              <p>
+                Bienvenidos a <strong>SampleText</strong>, una aplicación innovadora creada para ayudarte a organizar tu
+                día a día de manera eficiente y sencilla. Fundada en 2025, nuestra misión es proporcionarte una
+                herramienta integral que te permita gestionar tu tiempo, eventos y comunicaciones personales en un solo
+                lugar.
+              </p>
 
-          <h2 class="text-primary">¿Quiénes somos?</h2>
-          <p>
-            Somos un equipo de entusiastas de la tecnología, diseñadores y
-            expertos en productividad comprometidos con hacer tu vida más
-            organizada. Sabemos lo valioso que es tu tiempo y queremos ofrecerte
-            herramientas para aprovecharlo al máximo.
-          </p>
+              <h2 class="about-subtitle animate-on-scroll" data-delay="0.6">¿Quiénes somos?</h2>
+              <p class="animate-on-scroll" data-delay="0.8">
+                Somos un equipo de entusiastas de la tecnología, diseñadores y expertos en productividad comprometidos
+                con hacer tu vida más organizada. Sabemos lo valioso que es tu tiempo y queremos ofrecerte herramientas
+                para aprovecharlo al máximo.
+              </p>
+            </div>
 
-          <h2 class="text-primary text-center mt-5">¿Qué hacemos?</h2>
-          <div class="row text-center mt-4">
-            <div class="col-md-4">
-              <div class="p-4 border rounded shadow-sm bg-light h-100">
-                <h3>📅 Gestión de Tiempo</h3>
-                <p>
-                  Organiza tus actividades diarias, semanales o mensuales con
-                  calendarios, recordatorios y alertas inteligentes para mejorar
-                  tu productividad.
-                </p>
+            <div class="row team-cards animate-on-scroll" id="rrss" data-delay="0.9">
+              <!-- Tarjeta Gabriel -->
+              <div class="col-md-6 mb-4">
+                <div class="team-card h-100">
+                  <div class="team-card-header">
+                    <h3>Gabriel Daniel Manea</h3>
+                    <p class="text-muted">Co-Founder & Developer</p>
+                  </div>
+                  <div class="team-card-body">
+                    <p>Estudiante de Desarrollo de Aplicaciones Web (DAW) y aficionado por la IA.</p>
+                    <div class="social-links">
+                      <a href="https://github.com/G4DM" target="_blank" aria-label="GitHub"
+                        ><i class="fab fa-github"></i
+                      ></a>
+                      <a href="https://www.linkedin.com/in/gabriel-daniel-manea/" target="_blank" aria-label="LinkedIn"
+                        ><i class="fab fa-linkedin"></i
+                      ></a>
+                      <a href="https://x.com/G4DM_" target="_blank" aria-label="Twitter"
+                        ><i class="fab fa-twitter"></i
+                      ></a>
+                      <a href="https://instagram.com/g4biim" target="_blank" aria-label="Instagram"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta Minda -->
+              <div class="col-md-6 mb-4">
+                <div class="team-card h-100">
+                  <div class="team-card-header">
+                    <h3>Minda Huang</h3>
+                    <p class="text-muted">Co-Founder & Developer</p>
+                  </div>
+                  <div class="team-card-body">
+                    <p>Estudiante de Desarrollo de Aplicaciones Web (DAW) y buen jugador de Ajedrez.</p>
+                    <div class="social-links">
+                      <a href="https://github.com/MiN-115-H" target="_blank" aria-label="GitHub"
+                        ><i class="fab fa-github"></i
+                      ></a>
+                      <a href="https://www.linkedin.com/in/minda-huang-122689279/" target="_blank" aria-label="LinkedIn"
+                        ><i class="fab fa-linkedin"></i
+                      ></a>
+                      <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="p-4 border rounded shadow-sm bg-light h-100">
-                <h3>💬 Mensajería Rápida</h3>
-                <p>
-                  Mantente conectado con amigos, familiares o colegas a través
-                  de un sistema de mensajería integrado dentro de la plataforma.
-                </p>
+
+            <h2 class="about-subtitle text-center mt-5 animate-on-scroll" data-delay="1.0">¿Qué hacemos?</h2>
+            <div class="row mt-4">
+              <div class="col-md-4 mb-4">
+                <div class="feature-card animate-on-scroll" data-delay="1.2">
+                  <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+                  <h3>Gestión de Tiempo</h3>
+                  <p>
+                    Organiza tus actividades diarias, semanales o mensuales con calendarios, recordatorios y alertas
+                    inteligentes para mejorar tu productividad.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="feature-card animate-on-scroll" data-delay="1.4">
+                  <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                  <h3>Mensajería Rápida</h3>
+                  <p>
+                    Mantente conectado con amigos, familiares o colegas a través de un sistema de mensajería integrado
+                    dentro de la plataforma.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="feature-card animate-on-scroll" data-delay="1.6">
+                  <div class="feature-icon"><i class="fas fa-glass-cheers"></i></div>
+                  <h3>Eventos</h3>
+                  <p>
+                    Crea y organiza eventos personales o profesionales con recordatorios y notificaciones automáticas
+                    para que no se te pase nada importante.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="p-4 border rounded shadow-sm bg-light h-100">
-                <h3>🎉 Eventos</h3>
-                <p>
-                  Crea y organiza eventos personales o profesionales con
-                  recordatorios y notificaciones automáticas para que no se te
-                  pase nada importante.
-                </p>
+
+            <div class="about-content animate-on-scroll" data-delay="1.8">
+              <h2 class="about-subtitle">Nuestra misión</h2>
+              <p>
+                Creemos que una buena gestión del tiempo es clave para una vida equilibrada y productiva. Queremos
+                brindarte una solución intuitiva y todo-en-uno.
+              </p>
+
+              <h2 class="about-subtitle">Nuestra visión</h2>
+              <p>
+                Queremos ser tu herramienta de confianza para la organización diaria, ayudándote a gestionar lo que
+                realmente importa.
+              </p>
+
+              <h2 class="about-subtitle">Únete a nosotros</h2>
+              <p>Descarga la aplicación y descubre cómo transformar tu organización diaria.</p>
+
+              <div class="text-center my-5">
+                <a href="./contacto.html" class="btn btn-primary btn-lg btn-cta animate-on-scroll" data-delay="2.0">
+                  Contáctanos
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
               </div>
             </div>
-          </div>
-
-          <h2 class="text-primary mt-4">Nuestra misión</h2>
-          <p>
-            Creemos que una buena gestión del tiempo es clave para una vida
-            equilibrada y productiva. Queremos brindarte una solución intuitiva
-            y todo-en-uno.
-          </p>
-
-          <h2 class="text-primary">Nuestra visión</h2>
-          <p>
-            Queremos ser tu herramienta de confianza para la organización
-            diaria, ayudándote a gestionar lo que realmente importa.
-          </p>
-
-          <h2 class="text-primary">Únete a nosotros</h2>
-          <p>
-            Descarga la aplicación y descubre cómo transformar tu organización
-            diaria.
-          </p>
-
-          <div class="text-center my-4">
-            <a href="./contacto.html" class="btn btn-primary btn-lg shadow-lg"
-              >Contáctanos</a
-            >
           </div>
         </div>
-      </div>
 
-      <h2 class="text-primary text-center mt-5">Ven a conocernos</h2>
-      <p class="text-center">Horario: De Lunes a Viernes de 9:00 a 14:00</p>
-      <div class="text-center">
-        <iframe
-          class="rounded shadow-lg"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3081.761595910174!2d-0.46865632416276914!3d39.42951517161536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6051c6c56cfbf7%3A0x342b9d1e78f763c!2sIES%20Serra%20Perenxisa!5e0!3m2!1ses!2ses!4v1741109785079!5m2!1ses!2ses"
-          allowfullscreen=""
-          loading="lazy"></iframe>
-      </div>
+        <div class="location-section animate-on-scroll" data-delay="2.2">
+          <h2 class="about-subtitle text-center">Ven a conocernos</h2>
+          <p class="text-center text-muted">Horario: De Lunes a Viernes de 9:00 a 14:00</p>
+          <div class="map-container mt-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3081.761595910174!2d-0.46865632416276914!3d39.42951517161536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6051c6c56cfbf7%3A0x342b9d1e78f763c!2sIES%20Serra%20Perenxisa!5e0!3m2!1ses!2ses!4v1741109785079!5m2!1ses!2ses"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-      <div class="container">
-        <p>
-          &copy; <span id="current-year"></span> Sample Text. Todos los derechos
-          reservados.
-        </p>
-        <p>
-          <a href="#" class="text-white" target="_blank">Facebook</a> |
-          <a href="#" class="text-white" target="_blank">Twitter</a> |
-          <a href="#" class="text-white" target="_blank">Instagram</a>
-        </p>
+    <footer class="footer bg-212529 text-white">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="footer-brand mb-3">
+              <img
+                src="../assets/img/logo-wide.png"
+                alt="Sample Text Logo"
+                class="img-fluid footer-logo rounded-circle shadow-lg"
+                style="max-height: 80px; width: auto; border: 3px solid rgba(255, 255, 255, 0.2)" />
+            </div>
+            <p class="footer-text mb-4 mx-auto" style="max-width: 600px">
+              La solución todo en uno para organizar tus ideas, eventos y comunicaciones.
+            </p>
+            <div style="position: relative; z-index: 1000; display: inline-block">
+              <a
+                href="./conocenos.html#rrss"
+                class="btn btn-outline-light btn-sm"
+                style="position: relative; z-index: 1001">
+                Síguenos en Redes Sociales
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title mb-4">Enlaces</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2"><a href="../../index.html" class="footer-link">Inicio</a></li>
+              <li class="mb-2"><a href="./producto.html" class="footer-link">Producto</a></li>
+              <li class="mb-2"><a href="./conocenos.html" class="footer-link">Conócenos</a></li>
+              <li class="mb-2"><a href="./faq.html" class="footer-link">FAQ</a></li>
+              <li><a href="./contacto.html" class="footer-link">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-title mb-4">Contacto</h5>
+            <ul class="footer-contact list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:info@sampletext.com" class="footer-link">info@sampletext.com</a>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-phone-alt me-2"></i>
+                <a href="tel:+123456789" class="footer-link">+951 50 10 70</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>
+                <span>Carrer de la Corona D'Arago, 1, 46900 Torrent, Valencia</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider my-4 mx-auto" style="max-width: 80%" />
+
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <p class="mb-2">&copy; <span id="current-year"></span> Sample Text. Todos los derechos reservados.</p>
+            <p class="mb-0">
+              Hecho con <i class="fa-solid fa-heart text-danger"></i> por Gabriel Daniel Manea & Minda Huang
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <!-- JavaScript para el año dinámico -->
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+    <!-- Conocenos JS -->
+    <script src="../js/conocenos.js"></script>
     <script>
       // Obtener el elemento con el id 'current-year'
       const currentYear = document.getElementById("current-year");
@@ -200,9 +322,5 @@
       // Establecer el valor del año actual
       currentYear.textContent = new Date().getFullYear();
     </script>
-
-    <!-- Bootstrap JS y Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

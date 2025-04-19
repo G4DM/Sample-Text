@@ -1,0 +1,97 @@
+/*
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 18 de Abril de 2025
+// Estilo para la ventana de completado de envío de formulario
+// ===================================
+*/
+:root {
+  --color-darkest: #212529;
+  --color-darker: #343a40;
+  --color-primary: #0d6efd;
+  --color-success: #198754;
+  --color-light: #f8f9fa;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(33, 37, 41, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.mensaje {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  transform: scale(0.9);
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mensaje::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-success));
+}
+
+.check-icon {
+  font-size: 4rem;
+  color: var(--color-success);
+  margin-bottom: 1rem;
+  display: inline-block;
+  transform: scale(0);
+}
+
+.mensaje h1 {
+  color: var(--color-darker);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.mensaje p {
+  color: var(--color-darker);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, var(--color-primary), #1a3a8f);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+.boton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+}
+
+/* Partículas decorativas */
+.particle {
+  position: absolute;
+  background-color: rgba(13, 110, 253, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}

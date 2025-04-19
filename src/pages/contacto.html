@@ -14,144 +14,354 @@
     <link rel="icon" href="../assets/favicon.png" type="image/png" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/contacto.css" />
-    <title>Contáctanos</title>
+    <title>Contáctanos | Sample Text</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- Font Awesome 6 (Free version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
 
   <body>
-    <!-- Header con el logo -->
-    <header class="bg-dark py-3">
-      <div class="container text-center">
-        <a href="../../index.html">
-          <img
-            src="../assets/img/logo.png"
-            alt="Imagen del logo de Sample Text"
-            class="img-fluid"
-            style="max-height: 50px" />
-        </a>
+    <!-- Barra de navegación mejorada -->
+    <header class="header bg-darkest sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg px-0">
+          <div class="container-fluid">
+            <a href="../../index.html" class="navbar-brand d-flex align-items-center">
+              <img src="../assets/img/logo.png" alt="Sample Text Logo" class="logo-img me-2" style="height: 40px" />
+              <span class="brand-text d-none d-sm-inline">Sample Text</span>
+            </a>
+
+            <button
+              class="navbar-toggler custom-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="../../index.html"> <i class="fas fa-home d-lg-none me-2"></i>Inicio </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./producto.html">
+                    <i class="fas fa-box-open d-lg-none me-2"></i>Producto
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./conocenos.html"> <i class="fas fa-users d-lg-none me-2"></i>Conócenos </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./faq.html"> <i class="fas fa-question-circle d-lg-none me-2"></i>FAQ </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="./contacto.html">
+                    <i class="fas fa-envelope d-lg-none me-2"></i>Contacto
+                  </a>
+                </li>
+              </ul>
+
+              <div class="d-flex">
+                <a href="./producto.html" class="btn btn-primary btn-cta">
+                  <span class="d-none d-md-inline">Probar Demo</span>
+                  <span class="d-md-none">Demo</span>
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <!-- Barra de navegación (Nav) centrada -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(45deg, #007bff, #0056b3)">
+    <!-- Hero Section de Contacto -->
+    <section class="contact-hero">
       <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="../../index.html">Inicio</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./producto.html">Nuestro Producto</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./conocenos.html">Conócenos</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./faq.html">Preguntas Frecuentes</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-white active" href="./contacto.html">Contáctanos</a>
-            </li>
-          </ul>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="hero-title">Contáctanos</h1>
+            <p class="hero-lead">
+              ¿Tienes alguna pregunta, sugerencia o comentario? Estamos aquí para ayudarte. Completa el formulario y nos
+              pondremos en contacto contigo lo antes posible.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-visual">
+              <div class="visual-container">
+                <!-- Elemento principal de mensajes -->
+                <div class="message-bubble main-bubble">
+                  <i class="fas fa-comment-dots fa-3x"></i>
+                  <div class="bubble-tail"></div>
+                </div>
+                
+                <!-- Elementos secundarios animados -->
+                <div class="message-bubble bubble-1">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="message-bubble bubble-2">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="message-bubble bubble-3">
+                  <i class="fas fa-paper-plane"></i>
+                </div>
+                
+                <!-- Líneas de conexión decorativas -->
+                <div class="connection-line line-1"></div>
+                <div class="connection-line line-2"></div>
+                <div class="connection-line line-3"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </section>
 
     <!-- Formulario de contacto -->
-    <main class="contact-container">
-      <h1 class="contact-title text-center mb-4">Formulario de Contacto</h1>
-      <form id="contactForm" method="POST" action="../php/contacto.php">
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            class="form-control"
-            required
-            placeholder="Introduce tu nombre" />
+    <section class="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-card">
+              <h2 class="section-title text-center mb-4">Formulario de Contacto</h2>
+              <p class="text-center mb-5">
+                Completa el siguiente formulario y nuestro equipo te responderá en un plazo máximo de 24-48 horas.
+              </p>
+
+              <form id="contactForm" method="POST" action="../php/contacto.php" class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                      <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        class="form-control"
+                        required
+                        placeholder="Introduce tu nombre" />
+                      <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <label for="apellidos" class="form-label">Apellidos</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                      <input
+                        type="text"
+                        id="apellidos"
+                        name="apellidos"
+                        class="form-control"
+                        required
+                        placeholder="Introduce tus apellidos" />
+                      <div class="invalid-feedback">Por favor, introduce tus apellidos.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <label for="edad" class="form-label">Edad</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
+                      <input
+                        type="number"
+                        id="edad"
+                        name="edad"
+                        class="form-control"
+                        required
+                        min="18"
+                        max="120"
+                        placeholder="Introduce tu edad" />
+                      <div class="invalid-feedback">Debes tener al menos 18 años.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                      <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        class="form-control"
+                        required
+                        placeholder="Introduce tu teléfono" />
+                      <div class="invalid-feedback">Por favor, introduce un teléfono válido.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label for="correo" class="form-label">Correo Electrónico</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input
+                      type="email"
+                      id="correo"
+                      name="correo"
+                      class="form-control"
+                      required
+                      placeholder="Introduce tu correo" />
+                    <div class="invalid-feedback">Introduce un correo válido.</div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-comment-dots"></i></span>
+                    <textarea
+                      id="mensaje"
+                      name="mensaje"
+                      rows="5"
+                      class="form-control"
+                      required
+                      placeholder="Escriba aquí su consulta."></textarea>
+                    <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+                  </div>
+                </div>
+
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                    <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="apellidos" class="form-label">Apellidos</label>
-          <input
-            type="text"
-            id="apellidos"
-            name="apellidos"
-            class="form-control"
-            required
-            placeholder="Introduce tus apellidos" />
+      </div>
+    </section>
+
+    <!-- Información de contacto adicional -->
+    <section class="contact-info bg-light py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Otras formas de contactarnos</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="info-card text-center">
+              <div class="info-icon mb-3">
+                <i class="fas fa-envelope fa-3x text-primary"></i>
+              </div>
+              <h3>Correo Electrónico</h3>
+              <p class="mb-1"><strong>General:</strong> info@sampletext.com</p>
+              <p><strong>Soporte:</strong> soporte@sampletext.com</p>
+              <a href="mailto:info@sampletext.com" class="btn btn-outline-primary mt-2">Enviar Correo</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-card text-center">
+              <div class="info-icon mb-3">
+                <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
+              </div>
+              <h3>Oficinas</h3>
+              <p>
+                Carrer de la Corona D'Arago, 1<br />
+                46900 Torrent, Valencia
+              </p>
+              <a
+                href="https://maps.google.com?q=Carrer+de+la+Corona+D'Arago,+1,+46900+Torrent,+Valencia"
+                target="_blank"
+                class="btn btn-outline-primary mt-2"
+                >Ver en Mapa</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="edad" class="form-label">Edad</label>
-          <input type="number" id="edad" name="edad" class="form-control" required placeholder="Introduce tu edad" />
-        </div>
-        <div class="mb-3">
-          <label for="telefono" class="form-label">Teléfono</label>
-          <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            class="form-control"
-            required
-            placeholder="Introduce tu teléfono" />
-        </div>
-        <div class="mb-3">
-          <label for="correo" class="form-label">Correo Electrónico</label>
-          <input
-            type="email"
-            id="correo"
-            name="correo"
-            class="form-control"
-            required
-            placeholder="Introduce tu correo" />
-          <div class="invalid-feedback">Introduce un correo válido.</div>
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="4"
-            class="form-control"
-            placeholder="Escriba aquí su consulta."></textarea>
-        </div>
-        <button type="submit" class="contact-button">Enviar</button>
-      </form>
-    </main>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-      <div class="container">
-        <p>&copy; <span id="current-year"></span> Sample Text. Todos los derechos reservados.</p>
-        <p>
-          <a href="#" class="text-white" target="_blank">Facebook</a> |
-          <a href="#" class="text-white" target="_blank">Twitter</a> |
-          <a href="#" class="text-white" target="_blank">Instagram</a>
-        </p>
+    <footer class="footer bg-darkest text-white">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="footer-brand mb-3">
+              <img
+                src="../assets/img/logo-wide.png"
+                alt="Sample Text Logo"
+                class="img-fluid footer-logo rounded-circle shadow-lg"
+                style="max-height: 80px; width: auto; border: 3px solid rgba(255, 255, 255, 0.2)" />
+            </div>
+            <p class="footer-text mb-4 mx-auto" style="max-width: 600px">
+              La solución todo en uno para organizar tus ideas, eventos y comunicaciones.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f fa-lg"></i></a>
+              <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+              <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title mb-4">Enlaces</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2"><a href="../../index.html" class="footer-link">Inicio</a></li>
+              <li class="mb-2"><a href="./producto.html" class="footer-link">Producto</a></li>
+              <li class="mb-2"><a href="./conocenos.html" class="footer-link">Conócenos</a></li>
+              <li class="mb-2"><a href="./faq.html" class="footer-link">FAQ</a></li>
+              <li><a href="./contacto.html" class="footer-link">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-title mb-4">Contacto</h5>
+            <ul class="footer-contact list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:info@sampletext.com" class="footer-link">info@sampletext.com</a>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-phone-alt me-2"></i>
+                <a href="tel:+123456789" class="footer-link">+951 50 10 70</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>
+                <span>Carrer de la Corona D'Arago, 1, 46900 Torrent, Valencia</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider my-4 mx-auto" style="max-width: 80%" />
+
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <p class="mb-2">&copy; <span id="current-year"></span> Sample Text. Todos los derechos reservados.</p>
+            <p class="mb-0">
+              Hecho con <i class="fa-solid fa-heart text-danger"></i> por Gabriel Daniel Manea & Minda Huang
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <script>
-      document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
-
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS y Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-    <!-- Script personalizado -->
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+    <!-- Contact Form JS -->
     <script src="../js/contacto.js"></script>
+    <script>
+      // Obtener el elemento con el id 'current-year'
+      const currentYear = document.getElementById("current-year");
+
+      // Establecer el valor del año actual
+      currentYear.textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

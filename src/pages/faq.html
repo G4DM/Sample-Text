@@ -1,224 +1,314 @@
 <!-- ===================================
      Autor: Minda Huang
      Fecha: 05 de marzo de 2025
+     Autor de la última modificación: Gabriel Daniel Manea
+     Última fecha de modificación: 18 de Abril de 2025
   =================================== -->
 
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Gabriel Daniel Manea, Minda Huang">
-    <link rel="icon" href="../assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/faq.css">
-    <title>Preguntas Frecuentes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gabriel Daniel Manea, Minda Huang" />
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/faq.css" />
+    <title>Preguntas Frecuentes | Sample Text</title>
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome 6 (Free version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
-  <body>
-    <!-- Header con el logo -->
-    <header class="bg-dark py-3">
-      <div class="container text-center">
-        <a href="../index.html">
-          <img
-            src="../assets/img/logo.png"
-            alt="Imagen del logo de Sample Text"
-            class="img-fluid"
-            style="max-height: 50px">
-        </a>
+  <body style="opacity: 1; visibility: visible">
+    <!-- Barra de navegación -->
+    <header class="header bg-darkest sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg px-0">
+          <div class="container-fluid">
+            <a href="../../index.html" class="navbar-brand d-flex align-items-center">
+              <img src="../assets/img/logo.png" alt="Sample Text Logo" class="logo-img me-2" style="height: 40px" />
+              <span class="brand-text d-none d-sm-inline">Sample Text</span>
+            </a>
+
+            <button
+              class="navbar-toggler custom-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="../../index.html"> <i class="fas fa-home d-lg-none me-2"></i>Inicio </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./producto.html">
+                    <i class="fas fa-box-open d-lg-none me-2"></i>Producto
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./conocenos.html"> <i class="fas fa-users d-lg-none me-2"></i>Conócenos </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="./faq.html">
+                    <i class="fas fa-question-circle d-lg-none me-2"></i>FAQ
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./contacto.html">
+                    <i class="fas fa-envelope d-lg-none me-2"></i>Contacto
+                  </a>
+                </li>
+              </ul>
+
+              <div class="d-flex">
+                <a href="./producto.html" class="btn btn-primary btn-cta">
+                  <span class="d-none d-md-inline">Probar Demo</span>
+                  <span class="d-md-none">Demo</span>
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <!-- Barra de navegación (Nav) centrada -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark"
-      style="background: linear-gradient(45deg, #007bff, #0056b3)">
+    <!-- Contenido principal -->
+    <main class="faq-container py-5" style="opacity: 1 !important; visibility: visible !important">
       <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./producto.html"
-                >Nuestro Producto</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./conocenos.html"
-                >Conócenos</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-white active" href="./faq.html"
-                >Preguntas Frecuentes</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./contacto.html"
-                >Contáctanos</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <h1 class="text-center mb-5">Preguntas Frecuentes</h1>
 
-    <!-- Contenido de la página (personalizar con preguntas) -->
-    <main class="container py-5">
-      <h1 class="text-center">Preguntas Frecuentes</h1>
-      <h2>Preguntas Generales</h2>
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> ¿Qué es SampleText?
-        </h3>
-        <p class="faq-answer">
-          SampleText es una aplicación web diseñada para ayudar a las personas a
-          organizar sus eventos y gestionar su tiempo de manera más eficiente.
-          Ofrece funcionalidades como la creación de eventos, recordatorios y la
-          posibilidad de enviar mensajes entre usuarios para facilitar la
-          colaboración.
-        </p>
-      </div>
-      <!-- Añadir más preguntas -->
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> ¿Cuál es el propósito de SampleText?
-        </h3>
-        <p class="faq-answer">
-          El propósito de SampleText es brindarte herramientas sencillas y
-          efectivas para que puedas organizar tanto eventos como tus actividades
-          diarias. Ya sea que necesites planificar una reunión, establecer
-          recordatorios importantes o coordinarte con amigos y colegas, nuestra
-          aplicación está pensada para facilitarte la vida.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> ¿Vais a vender mis datos?
-        </h3>
-        <p class="faq-answer">
-          No, en SampleText nos tomamos muy en serio tu privacidad. No
-          venderemos ni compartiremos tus datos personales con terceros. Nos
-          comprometemos a proteger tu información y a usarla solo para ofrecerte
-          los servicios de nuestra plataforma.
-        </p>
-      </div>
-      <br>
-      <h2>Sobre la Aplicación</h2>
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> ¿Como hago una publicación?
-        </h3>
-        <p class="faq-answer">
-          Para hacer una publicación, simplemente ingresa a la sección de
-          mensajería de la aplicación y selecciona el grupo o contacto con el
-          que deseas compartir la información. Desde allí, puedes escribir tu
-          mensaje y compartirlo con las personas que elijas.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> ¿Como hago un recordatorio?
-        </h3>
-        <p class="faq-answer">
-          Para crear un recordatorio, accede a la opción de recordatorios en el
-          menú principal. Allí podrás elegir la fecha, hora y añadir detalles
-          específicos para que el recordatorio se active y te avise cuando lo
-          necesites.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> ¿Como hago un evento?
-        </h3>
-        <p class="faq-answer">
-          Para crear un evento, dirígete al calendario dentro de la aplicación.
-          Haz clic en la fecha en la que deseas programar el evento, ingresa los
-          detalles como la hora, ubicación y descripción, y luego guarda el
-          evento. También podrás invitar a otros usuarios a unirse.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> ¿Como puedo añadir amigos?
-        </h3>
-        <p class="faq-answer">
-          Para añadir amigos, ve a la sección de contactos y busca a las
-          personas que quieras agregar. Puedes buscarlas por su nombre de
-          usuario o correo electrónico. Luego, simplemente selecciona "Añadir
-          amigo" y espera a que acepten tu solicitud.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> Como activar una cuenta.
-        </h3>
-        <p class="faq-answer">
-          Para activar tu cuenta, primero crea una nueva cuenta con tu correo
-          electrónico y una contraseña segura. Después, recibirás un correo de
-          confirmación. Haz clic en el enlace del correo para verificar tu
-          cuenta y ¡listo! Ya podrás empezar a usar SampleText.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-question">
-          <span class="arrow">▼</span> Como borrar una cuenta
-        </h3>
-        <p class="faq-answer">
-          Si deseas borrar tu cuenta, dirígete a la configuración de tu perfil y
-          selecciona la opción de "Eliminar cuenta". Ten en cuenta que esta
-          acción es irreversible y perderás toda la información asociada a tu
-          cuenta.
-        </p>
+        <div class="faq-section">
+          <h2 class="faq-section-title">Preguntas Generales</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>¿Qué es SampleText?</span>
+            </div>
+            <div class="faq-answer show">
+              <p>
+                SampleText es una aplicación web diseñada para ayudar a las personas a organizar sus eventos y gestionar
+                su tiempo de manera más eficiente. Ofrece funcionalidades como la creación de eventos, recordatorios y
+                la posibilidad de enviar mensajes entre usuarios para facilitar la colaboración.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>¿Cuál es el propósito de SampleText?</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                El propósito de SampleText es brindarte herramientas sencillas y efectivas para que puedas organizar
+                tanto eventos como tus actividades diarias. Ya sea que necesites planificar una reunión, establecer
+                recordatorios importantes o coordinarte con amigos y colegas, nuestra aplicación está pensada para
+                facilitarte la vida.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>¿Vais a vender mis datos?</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                No, en SampleText nos tomamos muy en serio tu privacidad. No venderemos ni compartiremos tus datos
+                personales con terceros. Nos comprometemos a proteger tu información y a usarla solo para ofrecerte los
+                servicios de nuestra plataforma.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <h2 class="faq-section-title">Sobre la Aplicación</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>¿Como hago una publicación?</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Para hacer una publicación, simplemente ingresa a la sección de mensajería de la aplicación y selecciona
+                el grupo o contacto con el que deseas compartir la información. Desde allí, puedes escribir tu mensaje y
+                compartirlo con las personas que elijas.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>¿Como hago un recordatorio?</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Para crear un recordatorio, accede a la opción de recordatorios en el menú principal. Allí podrás elegir
+                la fecha, hora y añadir detalles específicos para que el recordatorio se active y te avise cuando lo
+                necesites.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>¿Como hago un evento?</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Para crear un evento, dirígete al calendario dentro de la aplicación. Haz clic en la fecha en la que
+                deseas programar el evento, ingresa los detalles como la hora, ubicación y descripción, y luego guarda
+                el evento. También podrás invitar a otros usuarios a unirse.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>¿Como puedo añadir amigos?</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Para añadir amigos, ve a la sección de contactos y busca a las personas que quieras agregar. Puedes
+                buscarlas por su nombre de usuario o correo electrónico. Luego, simplemente selecciona "Añadir amigo" y
+                espera a que acepten tu solicitud.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>Como activar una cuenta.</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Para activar tu cuenta, primero crea una nueva cuenta con tu correo electrónico y una contraseña segura.
+                Después, recibirás un correo de confirmación. Haz clic en el enlace del correo para verificar tu cuenta
+                y ¡listo! Ya podrás empezar a usar SampleText.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-chevron-down faq-arrow"></i>
+              <span>Como borrar una cuenta</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Si deseas borrar tu cuenta, dirígete a la configuración de tu perfil y selecciona la opción de "Eliminar
+                cuenta". Ten en cuenta que esta acción es irreversible y perderás toda la información asociada a tu
+                cuenta.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-      <div class="container">
-        <p>
-          &copy; <span id="current-year"></span> Sample Text. Todos los derechos
-          reservados.
-        </p>
-        <p>
-          <a href="#" class="text-white" target="_blank">Facebook</a> |
-          <a href="#" class="text-white" target="_blank">Twitter</a> |
-          <a href="#" class="text-white" target="_blank">Instagram</a>
-        </p>
+    <footer class="footer bg-darkest text-white">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="footer-brand mb-3">
+              <img
+                src="../assets/img/logo-wide.png"
+                alt="Sample Text Logo"
+                class="img-fluid footer-logo rounded-circle shadow-lg"
+                style="max-height: 80px; width: auto; border: 3px solid rgba(255, 255, 255, 0.2)" />
+            </div>
+            <p class="footer-text mb-4 mx-auto" style="max-width: 600px">
+              La solución todo en uno para organizar tus ideas, eventos y comunicaciones.
+            </p>
+            <div style="position: relative; z-index: 1000; display: inline-block">
+              <a href="./conocenos.html" class="btn btn-outline-light btn-sm" style="position: relative; z-index: 1001">
+                Síguenos en Redes Sociales
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title mb-4">Enlaces</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2"><a href="../../index.html" class="footer-link">Inicio</a></li>
+              <li class="mb-2"><a href="./producto.html" class="footer-link">Producto</a></li>
+              <li class="mb-2"><a href="./conocenos.html" class="footer-link">Conócenos</a></li>
+              <li class="mb-2"><a href="./faq.html" class="footer-link">FAQ</a></li>
+              <li><a href="./contacto.html" class="footer-link">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-title mb-4">Contacto</h5>
+            <ul class="footer-contact list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:info@sampletext.com" class="footer-link">info@sampletext.com</a>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-phone-alt me-2"></i>
+                <a href="tel:+123456789" class="footer-link">+951 50 10 70</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>
+                <span>Carrer de la Corona D'Arago, 1, 46900 Torrent, Valencia</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider my-4 mx-auto" style="max-width: 80%" />
+
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <p class="mb-2">&copy; <span id="current-year"></span> Sample Text. Todos los derechos reservados.</p>
+            <p class="mb-0">
+              Hecho con <i class="fa-solid fa-heart text-danger"></i> por Gabriel Daniel Manea & Minda Huang
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <!-- JavaScript para el año dinámico -->
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/faq.js"></script>
     <script>
       // Obtener el elemento con el id 'current-year'
       const currentYear = document.getElementById("current-year");
 
       // Establecer el valor del año actual
       currentYear.textContent = new Date().getFullYear();
+
+      // Forzar visibilidad del contenido
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".faq-container, .faq-section").forEach((el) => {
+          el.style.opacity = "1";
+          el.style.visibility = "visible";
+        });
+      });
     </script>
-
-    <!-- Bootstrap JS y Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-    <!-- Enlace al archivo JS externo -->
-    <script src="../js/faq.js"></script>
   </body>
 </html>

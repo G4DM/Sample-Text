@@ -6,46 +6,27 @@ session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario completado</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .mensaje {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .mensaje h1 {
-            color: #4CAF50;
-        }
-        .boton {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .boton:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario completado | Sample Text</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/completado.css">
 </head>
 <body>
     <div class="mensaje">
+        <div class="check-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
         <h1>¡Gracias<?php echo isset($_SESSION['nombre']) ? ', ' . htmlspecialchars($_SESSION['nombre']) : ''; ?>!</h1>
         <p>Tu mensaje se ha enviado correctamente.</p>
         <p>Nos pondremos en contacto contigo lo antes posible.</p>
         <a class="boton" href="../../index.html">Volver a inicio</a>
     </div>
+
+    <!-- JavaScript personalizado -->
+    <script src="../js/completado.js"></script>
 </body>
 </html>

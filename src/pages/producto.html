@@ -1,128 +1,244 @@
-<!-- ===================================
-     Autor: Gabriel Daniel Manea
-     Fecha: 05 de marzo de 2025
-  =================================== -->
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Gabriel Daniel Manea, Minda Huang">
-    <link rel="icon" href="../assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../css/main.css">
-    <title>Nuestro Producto</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gabriel Daniel Manea, Minda Huang" />
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/producto.css" />
+    <title>Sample Text - Notas</title>
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+    <!-- Font Awesome 6 (Free version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <!-- Header con el logo -->
-    <header class="bg-dark py-3">
-      <div class="container text-center">
-        <a href="../index.html">
-          <img
-            src="../assets/img/logo.png"
-            alt="Imagen del logo de Sample Text"
-            class="img-fluid"
-            style="max-height: 50px">
-        </a>
+    <!-- Barra de navegación mejorada -->
+    <header class="header bg-darkest sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg px-0">
+          <div class="container-fluid">
+            <a href="../../index.html" class="navbar-brand d-flex align-items-center">
+              <img src="../assets/img/logo.png" alt="Sample Text Logo" class="logo-img me-2" style="height: 40px" />
+              <span class="brand-text d-none d-sm-inline">Sample Text</span>
+            </a>
+
+            <button
+              class="navbar-toggler custom-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                  <a class="nav-link" aria-current="page" href="../../index.html">
+                    <i class="fas fa-home d-lg-none me-2"></i>Inicio
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" href="./producto.html">
+                    <i class="fas fa-box-open d-lg-none me-2"></i>Producto
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./conocenos.html"> <i class="fas fa-users d-lg-none me-2"></i>Conócenos </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./faq.html"> <i class="fas fa-question-circle d-lg-none me-2"></i>FAQ </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="./contacto.html">
+                    <i class="fas fa-envelope d-lg-none me-2"></i>Contacto
+                  </a>
+                </li>
+              </ul>
+
+              <div class="d-flex">
+                <a href="./producto.html" class="btn btn-primary btn-cta">
+                  <span class="d-none d-md-inline">Probar Demo</span>
+                  <span class="d-md-none">Demo</span>
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <!-- Barra de navegación (Nav) centrada -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark"
-      style="background: linear-gradient(45deg, #007bff, #0056b3)">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-white active" href="./producto.html"
-                >Nuestro Producto</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./conocenos.html"
-                >Conócenos</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./faq.html"
-                >Preguntas Frecuentes</a
-              >
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-grey" href="./contacto.html"
-                >Contáctanos</a
-              >
-            </li>
-          </ul>
+    <main class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h1 class="text-center mb-4">Sistema de Notas Sample Text</h1>
+          <p class="lead text-center mb-5">
+            Organiza tus ideas con nuestro sistema de notas intuitivo. Tus notas se guardan automáticamente en tu
+            navegador utilizando el LocalStorage.
+          </p>
+          <p class="text-center">
+            <em>Estamos trabajando en traer la mensajería y la gestión de eventos lo antes posible.</em>
+          </p>
+
+          <div class="card shadow-sm mb-5">
+            <div class="card-body">
+              <div class="controls d-flex justify-content-between align-items-center mb-4">
+                <button id="addNoteBtn" class="btn btn-primary"><i class="bi bi-plus-lg me-2"></i>Nueva Nota</button>
+                <div class="color-picker d-flex align-items-center">
+                  <span class="me-2">Color:</span>
+                  <input type="color" id="noteColor" value="#ffffff" class="form-control form-control-color" />
+                </div>
+              </div>
+
+              <div id="notesGrid" class="notes-grid"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-
-    <!-- Contenido de la página -->
-    <main class="container py-5">
-      <h1 class="text-center text-dark mb-4">Nuestro Producto</h1>
-      <p class="lead text-center text-muted">
-        Actualmente, solo tenemos disponible la funcionalidad de notas para que
-        puedas probarla. Si encuentras algún error o tienes alguna duda, no
-        dudes en
-        <a href="mailto:sampletextcompany@gmail.com" class="fw-bold"
-          >contactarnos por correo electrónico</a
-        >
-        y te ayudaremos a solucionarlo.
-      </p>
-
-      <!-- Formulario para agregar una nueva nota -->
-      <form id="formularioNota" class="d-flex mb-4">
-        <input
-          type="text"
-          id="notaInput"
-          class="form-control me-2"
-          placeholder="Escribe una nota"
-          required>
-        <button type="submit" class="btn btn-primary">Agregar Nota</button>
-      </form>
-
-      <!-- Lista de notas -->
-      <ul id="listaNotas" class="list-group"></ul>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-      <div class="container">
-        <p>
-          &copy; <span id="current-year"></span> Sample Text. Todos los derechos
-          reservados.
-        </p>
-        <p>
-          <a href="#" class="text-white" target="_blank">Facebook</a> |
-          <a href="#" class="text-white" target="_blank">Twitter</a> |
-          <a href="#" class="text-white" target="_blank">Instagram</a>
-        </p>
+    <footer class="footer bg-212529 text-white">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="footer-brand mb-3">
+              <img
+                src="../assets/img/logo-wide.png"
+                alt="Sample Text Logo"
+                class="img-fluid footer-logo rounded-circle shadow-lg"
+                style="max-height: 80px; width: auto; border: 3px solid rgba(255, 255, 255, 0.2)" />
+            </div>
+            <p class="footer-text mb-4 mx-auto" style="max-width: 600px">
+              La solución todo en uno para organizar tus ideas, eventos y comunicaciones.
+            </p>
+            <div style="position: relative; z-index: 1000; display: inline-block">
+              <a
+                href="./conocenos.html#rrss"
+                class="btn btn-outline-light btn-sm"
+                style="position: relative; z-index: 1001">
+                Síguenos en Redes Sociales
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title mb-4">Enlaces</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2"><a href="../../index.html" class="footer-link">Inicio</a></li>
+              <li class="mb-2"><a href="./producto.html" class="footer-link">Producto</a></li>
+              <li class="mb-2"><a href="./conocenos.html" class="footer-link">Conócenos</a></li>
+              <li class="mb-2"><a href="./faq.html" class="footer-link">FAQ</a></li>
+              <li><a href="./contacto.html" class="footer-link">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-title mb-4">Contacto</h5>
+            <ul class="footer-contact list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:info@sampletext.com" class="footer-link">info@sampletext.com</a>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-phone-alt me-2"></i>
+                <a href="tel:+123456789" class="footer-link">+951 50 10 70</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>
+                <span>Carrer de la Corona D'Arago, 1, 46900 Torrent, Valencia</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider my-4 mx-auto" style="max-width: 80%" />
+
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <p class="mb-2">&copy; <span id="current-year"></span> Sample Text. Todos los derechos reservados.</p>
+            <p class="mb-0">
+              Hecho con <i class="fa-solid fa-heart text-danger"></i> por Gabriel Daniel Manea & Minda Huang
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <!-- JavaScript para el año dinámico -->
+    <!-- Modal de confirmación para eliminar nota -->
+    <div
+      class="modal fade"
+      id="deleteNoteModal"
+      tabindex="-1"
+      aria-labelledby="deleteNoteModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteNoteModalLabel">Eliminar nota</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">¿Estás seguro de que quieres eliminar esta nota?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast container -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="deleteToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Nota eliminada</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">La nota ha sido eliminada correctamente.</div>
+      </div>
+    </div>
+
+    <script>
+      // Animación de entrada GSAP
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".hero-animate", {
+          duration: 1,
+          y: 50,
+          opacity: 0,
+          stagger: 0.2,
+          ease: "power3.out",
+        });
+
+        gsap.from(".note", {
+          duration: 0.8,
+          y: 30,
+          opacity: 0,
+          stagger: 0.1,
+          ease: "back.out",
+          delay: 0.5,
+        });
+      });
+    </script>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SortableJS -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <!-- Main JS -->
+    <script src="../js/producto.js"></script>
     <script>
       // Obtener el elemento con el id 'current-year'
       const currentYear = document.getElementById("current-year");
@@ -130,12 +246,5 @@
       // Establecer el valor del año actual
       currentYear.textContent = new Date().getFullYear();
     </script>
-
-    <!-- Bootstrap JS y Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-    <!-- Enlace a producto.js -->
-    <script src="../js/producto.js"></script>
   </body>
 </html>
