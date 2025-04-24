@@ -21,6 +21,8 @@ Aplicación web para gestión básica de notas con almacenamiento local, mensaje
 
 ## 📂 **Estructura del proyecto**
 
+- [Documentación técnica](DOCUMENTACION.md)
+
 ```
 Sample Text/
 ├── src/
