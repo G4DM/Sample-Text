@@ -31,7 +31,7 @@ Aplicación web para gestión básica de notas con almacenamiento local, mensaje
 
 ## 📝 **Cómo ejecutar el proyecto**
 
-- Ya clonado el repositorio y ejecutado el script .sql y completado el archivo /src/php/config.php, tendrás que abrir un servidor PHP local mediante el siguiente comando:
+- Ya clonado el repositorio y ejecutado el script .sql y completado el archivo /src/php/config.php, tendrás que abrir un servidor PHP local mediante el siguiente comando (desde la raíz del proyecto):
 ```
 php -S localhost:8000
 ```
