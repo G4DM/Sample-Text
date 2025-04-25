@@ -9,7 +9,7 @@ Aplicación web para gestión básica de notas con almacenamiento local, mensaje
 ## **Autores**: Gabriel Daniel Manea | Minda Huang  
 ## **Tipo**: Trabajo de Fin de Grado (TFG | 1º Año de DAW)  
 
-## 🛠️ **Tecnologías utilizadas**
+## 🛠️ **Tecnologías utilizadas más destacables**
 
 - **HTML5**
 - **CSS3**
@@ -18,50 +18,7 @@ Aplicación web para gestión básica de notas con almacenamiento local, mensaje
 - **[GSAP](https://gsap.com/)** (Animaciones & Toast)
 - **[SortableJS](https://sortablejs.github.io/Sortable/)** (Para la creación del producto)
 
-
-## 📂 **Estructura del proyecto**
-
-- [Documentación técnica](DOCUMENTACION.md)
-
-```
-Sample Text/
-├── src/
-│   ├── assets/
-│   │   ├── img/
-│   │   │   ├── logo-wide.png
-│   │   │   ├── logo.png
-│   │   ├── favicon.png
-│   ├── css/
-│   │   ├── completado.css
-│   │   ├── conocenos.css
-│   │   ├── contacto.css
-│   │   ├── faq.css
-│   │   ├── index.css
-│   │   ├── main.css  (estilo que se aplica a todas las páginas)
-│   │   ├── producto.css
-│   ├── js/
-│   │   ├── completado.js
-│   │   ├── conocenos.js
-│   │   ├── contacto.js  (envía los datos mediante PHP a la BBDD)
-│   │   ├── faq.js
-│   │   ├── main.js  (lógica que se aplica a todas las páginas)
-│   │   ├── producto.js  (maneja la lógica del producto | LocalStorage)
-│   ├── pages/
-│   │   ├── conocenos.html
-│   │   ├── contacto.html
-│   │   ├── faq.html
-│   │   ├── producto.html
-│   ├── php/
-│   │   ├── completado.php
-│   │   ├── config.php
-│   │   ├── contacto.php
-│   ├── .gitignore
-│   ├── index.html
-│   ├── LICENSE
-│   ├── README.md
-│   ├── sample_text.sql
-```
-
+- Para más ver más documentación técnica, accede a [Documentación técnica](DOCUMENTACION.md)
 
 ## 🚀 **Funcionalidades actuales**
 
@@ -70,19 +27,23 @@ Sample Text/
 - Formulario funcional (con validación básica)
 - Notas básicas funcionales
 - Almacenamiento local para datos de las notas
-- Gestión de eventos mediante calendario (Por hacer)
 
 
 ## 📝 **Cómo ejecutar el proyecto**
 
-### **Clonando el repositorio**
+- Ya clonado el repositorio y ejecutado el script .sql y completado el archivo /src/php/config.php, tendrás que abrir un servidor PHP local mediante el siguiente comando:
+```
+php -S localhost:8000
+```
+
+- Luego, tendrás que acceder al navegador tuyo de preferencia, e introducir el siguiente enlace para acceder a la web y tener funcionando la parte del formulario.
 
 ```
-1. Clonar el repositorio:
-   git clone https://github.com/G4DM/Sample-Text.git
-2. Abrir el archivo `index.html` en cualquier navegador moderno.
-3. Acceder a la página del producto y ver las funcionalidades en acción.
+localhost:8000
 ```
+
+> [!WARNING]  
+> Si hay errores/no se ve la página de inicio, asegurate de no tener alguna otra aplicación usando el mismo puerto (XAMPP o similares).
 
 ## 📜 **Licencia**
 

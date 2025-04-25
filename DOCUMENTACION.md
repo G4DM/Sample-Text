@@ -26,7 +26,7 @@ El propósito principal de Sample Text es centralizar información, eventos y co
 
 ### Autores
 - **Gabriel Daniel Manea**: Desarrollador principal
-- **Minda Huang**: Colaboradora
+- **Minda Huang**: Colaborador/Creador de la idea
 
 Este proyecto fue desarrollado como Trabajo de Fin de Grado (TFG) para el primer año de Desarrollo de Aplicaciones Web (DAW).
 
