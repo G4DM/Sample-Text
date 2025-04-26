@@ -1,0 +1,110 @@
+/* ===================================
+*   Autor: Minda Huang
+*   Fecha: 05 de marzo de 2025
+*   Autor de la última modificación: Gabriel Daniel Manea
+*   Última fecha de modificación: 18 de Abril de 2025
+*  =================================== */
+
+/* Reset para asegurar visibilidad */
+body,
+html {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.faq-container {
+  background-color: #f8f9fa;
+  min-height: 60vh;
+  padding: 2rem 0;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.faq-section {
+  margin-bottom: 2.5rem;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.faq-section-title {
+  color: #212529;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #6c757d;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.faq-question {
+  background-color: #000000;
+  color: white;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+  background-color: #495057;
+}
+
+.faq-arrow {
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 1.5rem;
+  border-top: 1px solid #dee2e6;
+  display: none;
+}
+
+.faq-answer.show {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.faq-answer p {
+  margin-bottom: 0;
+  color: #495057;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 1.5rem 0;
+  }
+
+  .faq-question {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    padding: 1rem;
+  }
+}
