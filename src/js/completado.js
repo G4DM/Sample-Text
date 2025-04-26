@@ -1,4 +1,9 @@
-// Animación de entrada
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 18 de Abril de 2025
+// ===================================
+
+// Animación de entrada específica de esta página
 gsap.to(".mensaje", {
   duration: 0.8,
   scale: 1,
@@ -6,7 +11,7 @@ gsap.to(".mensaje", {
   ease: "back.out(1.7)",
 });
 
-// Animación del icono
+// Animación del icono específica de esta página
 gsap.to(".check-icon", {
   duration: 0.6,
   scale: 1,
@@ -14,7 +19,7 @@ gsap.to(".check-icon", {
   ease: "elastic.out(1, 0.5)",
 });
 
-// Crear partículas decorativas
+// Crear partículas decorativas (específico de esta página)
 function createParticles() {
   const colors = ["rgba(13, 110, 253, 0.1)", "rgba(25, 135, 84, 0.1)", "rgba(108, 117, 125, 0.1)"];
 
@@ -48,7 +53,7 @@ function createParticles() {
   }
 }
 
-// Efecto hover en el botón
+// Efecto hover en el botón específico de esta página
 function setupButtonHover() {
   const boton = document.querySelector(".boton");
   if (!boton) return;

@@ -1,14 +1,18 @@
-/* ===================================
-   Estilos para Sistema de Notas
-   con Arrastre Funcional
-   =================================== */
+/*
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 05 de marzo de 2025
+// Autor de la última modificación: Gabriel Daniel Manea
+// Última fecha de modificación: 26 de Abril de 2025
+// Descripción: Estilos para la página del producto
+// ===================================
+*/
 
 .notes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
   padding: 1rem 0;
-  will-change: transform;
 }
 
 .note {
@@ -16,15 +20,11 @@
   border-radius: 8px;
   padding: 1.25rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
   min-height: 200px;
-  transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: grab;
-  user-select: none;
   position: relative;
-  will-change: transform;
 }
 
 .note:hover {
@@ -44,7 +44,7 @@
   right: 0;
   text-align: center;
   font-size: 0.7rem;
-  color: #6c757d;
+  color: var(--color-darker-gray);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -53,29 +53,28 @@
   opacity: 1;
 }
 
+/* Contenido de nota */
 .note-content {
   flex-grow: 1;
   outline: none;
   margin-bottom: 1rem;
-  overflow-wrap: break-word;
   min-height: 120px;
   padding: 0.5rem;
   border-radius: 4px;
   transition: background-color 0.2s;
   cursor: text;
-  user-select: text;
 }
 
 .note-content:empty:before {
   content: attr(placeholder);
-  color: #6c757d;
-  pointer-events: none;
+  color: var(--color-darker-gray);
 }
 
 .note-content:focus {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
+/* Acciones de nota */
 .note-actions {
   display: flex;
   justify-content: flex-end;
@@ -97,7 +96,7 @@
 
 .note-btn:hover {
   background-color: rgba(0, 0, 0, 0.05);
-  color: #212529;
+  color: var(--color-darkest);
 }
 
 .note-btn.delete:hover {
@@ -106,7 +105,7 @@
 }
 
 .note-btn.color:hover {
-  color: #0d6efd;
+  color: var(--color-primary);
   background-color: rgba(13, 110, 253, 0.1);
 }
 
@@ -115,6 +114,7 @@
   background-color: rgba(255, 193, 7, 0.1);
 }
 
+/* Notas fijadas */
 .pinned {
   border-left: 4px solid #ffc107;
   cursor: default !important;
@@ -124,22 +124,19 @@
   transform: none !important;
 }
 
-/* Estilos para SortableJS */
+/* Estilos para SortableJS (completos) */
 .sortable-ghost {
   opacity: 0.6;
   background: #e0f7fa;
   border: 2px dashed #00bcd4 !important;
   transform: scale(0.98) !important;
-  transition: transform 0.2s ease !important;
 }
 
 .sortable-drag {
   opacity: 0.95 !important;
   transform: scale(1.03) rotateZ(1deg) !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
-  z-index: 1000 !important;
   cursor: grabbing !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 .active-drag {
@@ -147,22 +144,54 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25) !important;
 }
 
-.sortable-fallback {
-  display: none !important;
+/* Modal (completo) */
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Animaciones */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.modal-header {
+  background-color: var(--color-light-gray);
+  border-bottom: 1px solid var(--color-gray);
 }
 
+.modal-title {
+  font-weight: 600;
+  color: var(--color-darkest);
+}
+
+#confirmDeleteBtn {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  transition: all 0.2s ease;
+}
+
+#confirmDeleteBtn:hover {
+  background-color: #bb2d3b;
+  transform: translateY(-1px);
+}
+
+/* Toast (completo) */
+#deleteToast {
+  background-color: var(--color-light);
+  border-left: 4px solid #dc3545;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+#deleteToast.show {
+  display: block;
+  opacity: 1;
+  transform: none;
+}
+
+#deleteToast .toast-header {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--color-darkest);
+}
+
+/* Animaciones específicas */
 @keyframes fadeOut {
   to {
     opacity: 0;
@@ -174,94 +203,7 @@
   animation: fadeOut 0.3s ease-out forwards;
 }
 
-/* Estilos para el modal de confirmación */
-.modal-content {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  border: none;
-}
-
-.modal-header {
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
-  padding: 1.2rem;
-}
-
-.modal-title {
-  font-weight: 600;
-  color: #212529;
-}
-
-.modal-body {
-  padding: 1.5rem;
-}
-
-.modal-footer {
-  border-top: 1px solid #e9ecef;
-  padding: 1rem;
-}
-
-#confirmDeleteBtn {
-  background-color: #dc3545;
-  border-color: #dc3545;
-  transition: all 0.2s ease;
-}
-
-#confirmDeleteBtn:hover {
-  background-color: #bb2d3b;
-  border-color: #b02a37;
-  transform: translateY(-1px);
-}
-
-/* Estilos para el toast animado */
-#deleteToast {
-  background-color: var(--color-light);
-  border-left: 4px solid #dc3545;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: none; /* Desactivamos las transiciones por defecto de Bootstrap */
-}
-
-#deleteToast.show {
-  /* Esto es necesario para que Bootstrap no interfiera con nuestras animaciones */
-  display: block;
-  opacity: 1;
-  transform: none;
-}
-
-#deleteToast .toast-header {
-  background-color: rgba(220, 53, 69, 0.1);
-  color: var(--color-darkest);
-}
-
-.toast {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  overflow: hidden; /* Para que las animaciones no muestren contenido fuera del borde */
-}
-
-/* Animación de entrada del modal */
-.modal.fade .modal-dialog {
-  transform: translateY(-20px);
-  transition: transform 0.3s ease-out;
-}
-
-.modal.show .modal-dialog {
-  transform: translateY(0);
-}
-
-/* Mejorar la experiencia táctil */
-@media (hover: none) {
-  .note {
-    cursor: pointer;
-  }
-
-  .sortable-drag {
-    transform: scale(1.02) !important;
-  }
-}
-
-/* Responsive */
+/* Responsive (completo) */
 @media (max-width: 768px) {
   .notes-grid {
     grid-template-columns: 1fr;
@@ -273,5 +215,15 @@
 
   .note::after {
     font-size: 0.6rem;
+  }
+}
+
+@media (hover: none) {
+  .note {
+    cursor: pointer;
+  }
+
+  .sortable-drag {
+    transform: scale(1.02) !important;
   }
 }

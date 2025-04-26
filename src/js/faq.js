@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mainContent.style.visibility = "visible";
   }
 
-  // 2. Funcionalidad del acordeón FAQ
+  // 2. Funcionalidad del acordeón FAQ (específico de esta página)
   const faqQuestions = document.querySelectorAll(".faq-question");
 
   faqQuestions.forEach((question) => {

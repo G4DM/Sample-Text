@@ -6,6 +6,13 @@
 // ===================================
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Configuración común de GSAP
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.config({
+    nullTargetWarn: false,
+    force3D: false,
+  });
+
   // Animación del header al hacer scroll
   const header = document.querySelector(".header");
   if (header) {
@@ -62,8 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Animación de scroll para las secciones
-  gsap.registerPlugin(ScrollTrigger);
-
   const sections = document.querySelectorAll("section");
   sections.forEach((section) => {
     gsap.from(section, {
@@ -79,51 +84,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Animación específica para la sección hero
-  const heroTitle = document.querySelector(".hero-title");
-  const heroSubtitle = document.querySelector(".hero-subtitle");
-  const heroLead = document.querySelector(".hero-lead");
-  const ctaButton = document.querySelector(".cta-button");
+  // Animación de elementos con clase animate-on-scroll
+  const animateElements = document.querySelectorAll(".animate-on-scroll");
+  animateElements.forEach((element) => {
+    const delay = element.getAttribute("data-delay") || 0;
 
-  if (heroTitle && heroSubtitle && heroLead && ctaButton) {
-    const tl = gsap.timeline();
-    tl.from(heroTitle, {
-      duration: 1,
-      opacity: 0,
-      y: 30,
-      ease: "power2.out",
-    })
-      .from(
-        heroSubtitle,
-        {
-          duration: 0.8,
-          opacity: 0,
-          y: 20,
+    ScrollTrigger.create({
+      trigger: element,
+      start: "top 85%",
+      onEnter: () => {
+        gsap.to(element, {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          delay: parseFloat(delay) * 0.5,
           ease: "power2.out",
-        },
-        "-=0.5"
-      )
-      .from(
-        heroLead,
-        {
-          duration: 0.8,
-          opacity: 0,
-          y: 20,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      )
-      .from(
-        ctaButton,
-        {
-          duration: 0.8,
-          opacity: 0,
-          y: 20,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      );
-  }
+          overwrite: "auto",
+        });
+        element.classList.add("visible");
+      },
+      once: true,
+    });
+  });
 
   // Animación de las tarjetas de características
   const featureCards = document.querySelectorAll(".feature-card");
@@ -141,10 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       },
     });
-  });
 
-  // Efecto hover en las tarjetas
-  featureCards.forEach((card) => {
+    // Efecto hover en las tarjetas
     card.addEventListener("mouseenter", () => {
       gsap.to(card, {
         duration: 0.3,
@@ -171,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: footer,
       start: "top 80%",
       onEnter: () => {
-        // Animamos cada elemento del footer con retrasos
         gsap.utils.toArray(".footer-brand, .footer-title, .footer-links li, .footer-contact li").forEach((el, i) => {
           gsap.to(el, {
             opacity: 1,
@@ -210,4 +189,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
   }
+
+  // Precarga optimizada (común a todas las páginas)
+  window.addEventListener("load", function () {
+    gsap.to("body::after", {
+      duration: 0.3,
+      css: { top: "100%" },
+      ease: "power2.in",
+    });
+  });
 });

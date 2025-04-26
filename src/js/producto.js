@@ -1,5 +1,10 @@
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 18 de Abril de 2025
+// ===================================
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Elementos del DOM
+  // Elementos del DOM específicos de esta página
   const notesGrid = document.getElementById("notesGrid");
   const addNoteBtn = document.getElementById("addNoteBtn");
   const colorPicker = document.getElementById("noteColor");
@@ -21,9 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Sobreescribir los métodos show y hide para añadir animaciones
   deleteToastEl.addEventListener("show.bs.toast", function () {
-    // Resetear posición antes de animar
     gsap.set(deleteToastEl, { y: 100, opacity: 0 });
-    // Animación de entrada
     gsap.to(deleteToastEl, {
       y: 0,
       opacity: 1,
@@ -33,14 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   deleteToastEl.addEventListener("hide.bs.toast", function () {
-    // Animación de salida
     gsap.to(deleteToastEl, {
       y: 50,
       opacity: 0,
       duration: 0.3,
       ease: "power1.in",
       onComplete: () => {
-        // Resetear para la próxima vez
         deleteToastEl.classList.add("hide");
       },
     });
@@ -60,11 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
             noteElement.remove();
             saveNotesToStorage();
 
-            // Mostrar toast con animación
             deleteToastEl.classList.remove("hide");
             deleteToast.show();
 
-            // Cerrar modal
             const modal = bootstrap.Modal.getInstance(document.getElementById("deleteNoteModal"));
             modal.hide();
           },
@@ -121,30 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listeners
   addNoteBtn.addEventListener("click", createNewNote);
-
-  // Configurar evento de confirmación de eliminación
-  document.getElementById("confirmDeleteBtn").addEventListener("click", function () {
-    if (currentNoteToDelete) {
-      const noteElement = document.querySelector(`.note[data-id="${currentNoteToDelete}"]`);
-      if (noteElement) {
-        gsap.to(noteElement, {
-          duration: 0.3,
-          opacity: 0,
-          y: 20,
-          ease: "power1.in",
-          onComplete: () => {
-            noteElement.remove();
-            saveNotesToStorage();
-            deleteToast.show();
-
-            // Cerrar modal
-            const modal = bootstrap.Modal.getInstance(document.getElementById("deleteNoteModal"));
-            modal.hide();
-          },
-        });
-      }
-    }
-  });
 
   // Función para crear una nueva nota
   function createNewNote() {
@@ -262,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         saveNotesToStorage();
-        initSortable(); // Re-inicializar Sortable
+        initSortable();
       },
     });
   }
@@ -297,7 +272,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (savedNotes) {
       const notes = JSON.parse(savedNotes);
 
-      // Ordenar notas (fijadas primero)
       notes.sort((a, b) => {
         if (a.pinned && !b.pinned) return -1;
         if (!a.pinned && b.pinned) return 1;
@@ -331,7 +305,6 @@ document.addEventListener("DOMContentLoaded", function () {
         notesGrid.appendChild(noteElement);
         setupNoteEvents(noteElement, note.id);
 
-        // Animación de entrada
         gsap.to(noteElement, {
           duration: 0.6,
           y: 0,

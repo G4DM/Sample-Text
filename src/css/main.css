@@ -3,7 +3,8 @@
 // Autor: Gabriel Daniel Manea
 // Fecha: 05 de marzo de 2025
 // Autor de la última modificación: Gabriel Daniel Manea
-// Última fecha de modificación: 18 de Abril de 2025
+// Última fecha de modificación: 26 de Abril de 2025
+// Descripción: Estilos que se aplican globalmente a toda la web
 // ===================================
 */
 
@@ -17,9 +18,11 @@
   --color-dark: #495057;
   --color-darker: #343a40;
   --color-darkest: #212529;
+  --color-primary: #0d6efd;
+  --color-success: #198754;
 }
 
-/* Clases de utilidad para colores */
+/* Clases de utilidad para colores (se mantienen igual) */
 .bg-light {
   background-color: var(--color-light);
 }
@@ -76,7 +79,7 @@
   color: var(--color-darkest);
 }
 
-/* Estilos generales */
+/* Estilos generales (completos) */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-darkest);
@@ -95,15 +98,24 @@ a {
   padding: 0.5rem 0;
   transition: all 0.3s ease;
   z-index: 1030;
+  background-color: var(--color-darkest);
 }
 
 .header.scrolled {
   padding: 0.25rem 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background-color: rgba(33, 37, 41, 0.95) !important;
 }
 
+/* Navbar mejorado (estilos completos) */
 .navbar-brand {
   padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.02);
 }
 
 .logo-img {
@@ -114,26 +126,12 @@ a {
   height: 35px !important;
 }
 
-/* ===== NAVBAR MEJORADO ===== */
-.header {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navbar-brand {
-  transition: transform 0.3s ease;
-}
-
-.navbar-brand:hover {
-  transform: scale(1.02);
-}
-
-/* Estilos mejorados para el botón hamburguesa */
+/* Botón hamburguesa (estilos completos) */
 .custom-toggler {
-  border: 2px solid rgba(255, 255, 255, 0.8) !important; /* Borde más visible */
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
   padding: 0.5rem 0.75rem;
   transition: all 0.3s ease;
-  border-radius: 6px; /* Bordes ligeramente redondeados */
+  border-radius: 6px;
 }
 
 .custom-toggler:hover {
@@ -148,7 +146,6 @@ a {
   transition: transform 0.3s ease;
 }
 
-/* Efecto cuando el menú está abierto */
 .custom-toggler[aria-expanded="true"] {
   background-color: rgba(255, 255, 255, 0.15);
 }
@@ -157,7 +154,7 @@ a {
   transform: rotate(90deg);
 }
 
-/* Versión móvil con más contraste */
+/* Versión móvil del toggler */
 @media (max-width: 768px) {
   .custom-toggler {
     border-width: 2.5px;
@@ -169,6 +166,7 @@ a {
   }
 }
 
+/* Resto de estilos del header (completos) */
 .brand-text {
   font-weight: 600;
   color: var(--color-light);
@@ -196,7 +194,6 @@ a {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Indicador de página activa */
 .nav-link.active::after {
   content: "";
   position: absolute;
@@ -209,7 +206,7 @@ a {
   border-radius: 3px;
 }
 
-/* Botón CTA mejorado */
+/* Botón CTA (estilo completo) */
 .btn-cta {
   background-color: var(--color-darker-gray);
   border: none;
@@ -249,7 +246,7 @@ a {
   left: 100%;
 }
 
-/* Menú móvil mejorado */
+/* Menú móvil (estilo completo) */
 @media (max-width: 992px) {
   .navbar-collapse {
     background-color: var(--color-darker);
@@ -275,18 +272,7 @@ a {
   }
 }
 
-/* Efecto al hacer scroll */
-.header.scrolled {
-  padding: 0.25rem 0;
-  backdrop-filter: blur(10px);
-  background-color: rgba(33, 37, 41, 0.95) !important;
-}
-
-.header.scrolled .logo-img {
-  height: 35px !important;
-}
-
-/* ===== FOOTER ===== */
+/* ===== FOOTER ===== (estilos completos) */
 .footer {
   background-color: var(--color-darkest);
   position: relative;

@@ -1,12 +1,16 @@
-/* ===================================
-   Autor: Gabriel Daniel Manea
-   Fecha: 05 de Marzo de 2025
-   Última modificación: 18 de Abril de 2025
-=================================== */
+/*
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 05 de marzo de 2025
+// Autor de la última modificación: Gabriel Daniel Manea
+// Última fecha de modificación: 26 de Abril de 2025
+// Descripción: Estilos para la página del formulario de contacto
+// ===================================
+*/
 
-/* Hero Section de Contacto */
+/* Hero Section */
 .contact-hero {
-  background: linear-gradient(135deg, #252729 0%, #6c757d 100%);
+  background: linear-gradient(135deg, #252729 0%, var(--color-darker-gray) 100%);
   color: white;
   padding: 5rem 0;
   position: relative;
@@ -44,26 +48,20 @@
   margin-bottom: 2rem;
 }
 
+/* Animación de ilustración */
 .contact-illustration {
   animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
-/* Sección de Contacto */
+/* Formulario de contacto */
 .contact-section {
   padding: 5rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-gray);
 }
 
 .contact-card {
@@ -79,17 +77,17 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-/* Estilos del formulario */
+/* Elementos del formulario */
 .form-label {
   font-weight: 600;
-  color: #495057;
+  color: var(--color-dark);
   margin-bottom: 0.5rem;
 }
 
 .input-group-text {
   background-color: #f1f3f5;
   border-right: none;
-  color: #6c757d;
+  color: var(--color-darker-gray);
 }
 
 .form-control {
@@ -99,7 +97,7 @@
 }
 
 .form-control:focus {
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+  box-shadow: 0 0 0 0.25rem rgba(var(--color-primary), 0.15);
 }
 
 textarea.form-control {
@@ -112,7 +110,7 @@ textarea.form-control {
   font-weight: 600;
   letter-spacing: 0.5px;
   border: none;
-  background: linear-gradient(135deg, #1a3a8f 0%, #0d6efd 100%);
+  background: linear-gradient(135deg, #1a3a8f 0%, var(--color-primary) 100%);
   transition: all 0.3s ease;
 }
 
@@ -121,99 +119,7 @@ textarea.form-control {
   box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
 }
 
-/* Sección de información de contacto */
-.contact-info {
-  background-color: #f8f9fa;
-}
-
-.info-card {
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  height: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.info-icon {
-  color: #0d6efd;
-}
-
-/* Validaciones */
-.is-valid {
-  border-color: #198754 !important;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-}
-
-.is-invalid {
-  border-color: #dc3545 !important;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-}
-
-.invalid-feedback {
-  font-size: 0.875rem;
-  color: #dc3545;
-  margin-top: 0.25rem;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .contact-hero {
-    padding: 4rem 0;
-    text-align: center;
-  }
-
-  .contact-hero .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .contact-hero .hero-lead {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .contact-illustration {
-    margin-top: 3rem;
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-card {
-    padding: 2rem;
-  }
-
-  .contact-hero .hero-title {
-    font-size: 2rem;
-  }
-
-  .contact-hero .hero-lead {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-card {
-    padding: 1.5rem;
-  }
-
-  .contact-hero {
-    padding: 3rem 0;
-  }
-}
-
-/* Estilos para la sección visual de contacto */
+/* Sección visual con burbujas (completa) */
 .contact-visual {
   position: relative;
   height: 300px;
@@ -228,7 +134,6 @@ textarea.form-control {
   height: 100%;
 }
 
-/* Estilos base para las burbujas de mensaje */
 .message-bubble {
   position: absolute;
   background: white;
@@ -237,11 +142,10 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  color: #0d6efd;
+  color: var(--color-primary);
   transition: all 0.3s ease;
 }
 
-/* Burbuja principal */
 .main-bubble {
   width: 120px;
   height: 120px;
@@ -249,11 +153,6 @@ textarea.form-control {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  animation: pulse 2s infinite;
-}
-
-.main-bubble .fa-comment-dots {
-  transform: rotate(-5deg);
 }
 
 .bubble-tail {
@@ -299,118 +198,85 @@ textarea.form-control {
 /* Líneas de conexión */
 .connection-line {
   position: absolute;
-  background: #0d6efd;
+  background: var(--color-primary);
   height: 2px;
   transform-origin: left center;
   z-index: 1;
   opacity: 0.3;
 }
 
-.line-1 {
-  width: 80px;
-  top: 45%;
-  left: 30%;
-  transform: rotate(15deg);
-  animation: line-pulse 3s infinite;
-}
+.line-1 { width: 80px; top: 45%; left: 30%; transform: rotate(15deg); animation: line-pulse 3s infinite; }
+.line-2 { width: 100px; top: 60%; left: 35%; transform: rotate(-10deg); animation: line-pulse 4s infinite; }
+.line-3 { width: 90px; top: 55%; left: 60%; transform: rotate(5deg); animation: line-pulse 5s infinite; }
 
-.line-2 {
-  width: 100px;
-  top: 60%;
-  left: 35%;
-  transform: rotate(-10deg);
-  animation: line-pulse 4s infinite;
-}
-
-.line-3 {
-  width: 90px;
-  top: 55%;
-  left: 60%;
-  transform: rotate(5deg);
-  animation: line-pulse 5s infinite;
-}
-
-/* Animaciones */
-@keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.05);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
+/* Animaciones específicas */
 @keyframes float-1 {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(5deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
 }
 
 @keyframes float-2 {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(10px) rotate(-5deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-5deg); }
 }
 
 @keyframes float-3 {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(8deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(8deg); }
 }
 
 @keyframes line-pulse {
-  0% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.3;
-  }
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.1; }
 }
 
-/* Responsive */
+/* Validaciones (completas) */
+.is-valid {
+  border-color: var(--color-success) !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+}
+
+.invalid-feedback {
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}
+
+/* Responsive (completo) */
 @media (max-width: 992px) {
   .contact-visual {
     height: 250px;
     margin-top: 2rem;
   }
-
+  
   .main-bubble {
     width: 100px;
     height: 100px;
   }
-
-  .bubble-1,
-  .bubble-2,
-  .bubble-3 {
+  
+  .bubble-1, .bubble-2, .bubble-3 {
     width: 50px;
     height: 50px;
   }
-
+  
   .connection-line {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-card {
+    padding: 1.5rem;
   }
 }

@@ -1,3 +1,14 @@
+<!--
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 18 de Abril de 2025
+// Autor de la última modificación: -
+// Última fecha de modificación: -
+// Descripción: Script que importa las credenciales de "config.php" y que las utiliza para (resumidamente) enviar los datos
+// del formulario a las tablas correspondientes de la Base de Datos MySQL.
+// ===================================
+-->
+
 <?php
 // Incluir la configuración de conexión
 include 'config.php';

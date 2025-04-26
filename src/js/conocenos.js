@@ -6,38 +6,7 @@
 // ===================================
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Configuración optimizada de GSAP
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.config({
-    nullTargetWarn: false,
-    force3D: false,
-  });
-
-  // Animaciones más rápidas
-  const animateElements = document.querySelectorAll(".animate-on-scroll");
-
-  animateElements.forEach((element) => {
-    const delay = element.getAttribute("data-delay") || 0;
-
-    ScrollTrigger.create({
-      trigger: element,
-      start: "top 85%",
-      onEnter: () => {
-        gsap.to(element, {
-          y: 0,
-          opacity: 1,
-          duration: 0.5, // Reducido de 0.8s
-          delay: parseFloat(delay) * 0.5, // Reducimos el delay
-          ease: "power2.out",
-          overwrite: "auto",
-        });
-        element.classList.add("visible");
-      },
-      once: true, // Solo se ejecuta una vez
-    });
-  });
-
-  // Optimización de tarjetas
+  // Optimización de tarjetas específicas de la página
   const featureCards = document.querySelectorAll(".feature-card");
   featureCards.forEach((card, index) => {
     ScrollTrigger.create({
@@ -47,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.to(card, {
           y: 0,
           opacity: 1,
-          duration: 0.4, // Más rápido
-          delay: index * 0.1, // Menor delay entre elementos
+          duration: 0.4,
+          delay: index * 0.1,
           ease: "power2.out",
           onComplete: () => card.classList.add("visible"),
         });
@@ -56,12 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
       once: true,
     });
 
-    // Hover optimizado
+    // Hover específico para estas tarjetas
     card.addEventListener("mouseenter", () => {
       gsap.to(card, {
         y: -5,
         scale: 1.02,
-        duration: 0.2, // Más rápido
+        duration: 0.2,
         ease: "power1.out",
       });
     });
@@ -76,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Optimización sección ubicación
+  // Optimización sección ubicación (específica de esta página)
   const locationSection = document.querySelector(".location-section");
   if (locationSection) {
     ScrollTrigger.create({
@@ -94,18 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
       once: true,
     });
   }
-
-  // Precarga optimizada
-  window.addEventListener("load", function () {
-    gsap.to("body::after", {
-      duration: 0.3,
-      css: { top: "100%" },
-      ease: "power2.in",
-    });
-  });
 });
 
-// Animación para las tarjetas de equipo
+// Animación para las tarjetas de equipo (específica de esta página)
 const teamCards = document.querySelectorAll(".team-card");
 teamCards.forEach((card, index) => {
   gsap.fromTo(
@@ -125,7 +85,7 @@ teamCards.forEach((card, index) => {
     }
   );
 
-  // Efecto hover mejorado
+  // Efecto hover mejorado específico para team-cards
   card.addEventListener("mouseenter", () => {
     gsap.to(card, {
       y: -8,

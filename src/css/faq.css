@@ -1,37 +1,29 @@
-/* ===================================
-*   Autor: Minda Huang
-*   Fecha: 05 de marzo de 2025
-*   Autor de la última modificación: Gabriel Daniel Manea
-*   Última fecha de modificación: 18 de Abril de 2025
-*  =================================== */
-
-/* Reset para asegurar visibilidad */
-body,
-html {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
+/*
+// ===================================
+// Autor: Minda Huang
+// Fecha: 05 de marzo de 2025
+// Autor de la última modificación: Gabriel Daniel Manea
+// Última fecha de modificación: 26 de Abril de 2025
+// Descripción: Estilos para la página de FAQ
+// ===================================
+*/
 
 .faq-container {
-  background-color: #f8f9fa;
+  background-color: var(--color-light-gray);
   min-height: 60vh;
   padding: 2rem 0;
-  opacity: 1 !important;
-  visibility: visible !important;
 }
 
 .faq-section {
   margin-bottom: 2.5rem;
-  opacity: 1 !important;
-  visibility: visible !important;
 }
 
 .faq-section-title {
-  color: #212529;
+  color: var(--color-darkest);
   font-weight: 600;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #6c757d;
+  border-bottom: 2px solid var(--color-darker-gray);
 }
 
 .faq-item {
@@ -43,7 +35,7 @@ html {
 }
 
 .faq-question {
-  background-color: #343a40;
+  background-color: var(--color-darker);
   color: white;
   padding: 1rem 1.5rem;
   cursor: pointer;
@@ -54,7 +46,7 @@ html {
 }
 
 .faq-question:hover {
-  background-color: #495057;
+  background-color: var(--color-dark);
 }
 
 .faq-arrow {
@@ -68,7 +60,7 @@ html {
 
 .faq-answer {
   padding: 1.5rem;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--color-gray);
   display: none;
 }
 
@@ -78,22 +70,11 @@ html {
 }
 
 .faq-answer p {
+  color: var(--color-dark);
   margin-bottom: 0;
-  color: #495057;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
+/* Responsive (completo) */
 @media (max-width: 768px) {
   .faq-container {
     padding: 1.5rem 0;

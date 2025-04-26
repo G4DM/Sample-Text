@@ -1,3 +1,12 @@
+<!--
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 18 de Abril de 2025
+// Autor de la última modificación: -
+// Última fecha de modificación: -
+// Descripción: Archivo que almacena los datos para ser usados en "contacto.php".
+// ===================================
+-->
 <?php
 $host = "localhost";
 $usuario = "root";

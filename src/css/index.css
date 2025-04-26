@@ -3,9 +3,11 @@
 // Autor: Gabriel Daniel Manea
 // Fecha: 05 de marzo de 2025
 // Autor de la última modificación: Gabriel Daniel Manea
-// Última fecha de modificación: 18 de Abril de 2025
+// Última fecha de modificación: 26 de Abril de 2025
+// Descripción: Estilos para la página principal/índice
 // ===================================
 */
+
 .hero-section {
   position: relative;
   padding: 8rem 0;
@@ -81,7 +83,7 @@
   height: 100%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
-  margin-bottom: 1.5rem; /* Añadido margen inferior */
+  margin-bottom: 1.5rem;
 }
 
 .feature-card:hover {
@@ -118,7 +120,7 @@
   background-color: var(--color-darker-gray);
 }
 
-/* Responsive */
+/* Responsive (completo) */
 @media (max-width: 992px) {
   .feature-card {
     margin-bottom: 1rem;
@@ -132,5 +134,13 @@
 
   .features-section {
     padding: 4rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
 }

@@ -1,3 +1,12 @@
+<!--
+// ===================================
+// Autor: Gabriel Daniel Manea
+// Fecha: 18 de Abril de 2025
+// Autor de la última modificación: -
+// Última fecha de modificación: -
+// Descripción: Página que se muestra después de enviar el formulario de manera correcta. Redirige al Inicio.
+// ===================================
+-->
 <?php
 session_start();
 ?>

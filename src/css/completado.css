@@ -1,17 +1,12 @@
 /*
 // ===================================
 // Autor: Gabriel Daniel Manea
-// Fecha: 18 de Abril de 2025
-// Estilo para la ventana de completado de envío de formulario
+// Fecha: 05 de marzo de 2025
+// Autor de la última modificación: Gabriel Daniel Manea
+// Última fecha de modificación: 26 de Abril de 2025
+// Descripción: Estilos para la página de "completado" (finalizado formulario)
 // ===================================
 */
-:root {
-  --color-darkest: #212529;
-  --color-darker: #343a40;
-  --color-primary: #0d6efd;
-  --color-success: #198754;
-  --color-light: #f8f9fa;
-}
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -36,6 +31,7 @@ body {
   opacity: 0;
   position: relative;
   overflow: hidden;
+  animation: fadeInUp 0.5s ease forwards;
 }
 
 .mensaje::before {
@@ -54,6 +50,7 @@ body {
   margin-bottom: 1rem;
   display: inline-block;
   transform: scale(0);
+  animation: scaleIn 0.5s 0.3s ease forwards;
 }
 
 .mensaje h1 {
@@ -73,7 +70,6 @@ body {
   margin-top: 25px;
   padding: 12px 30px;
   background: linear-gradient(135deg, var(--color-primary), #1a3a8f);
-  color: white;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 500;
@@ -94,4 +90,18 @@ body {
   background-color: rgba(13, 110, 253, 0.1);
   border-radius: 50%;
   pointer-events: none;
+}
+
+/* Animaciones específicas */
+@keyframes scaleIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mensaje {
+    padding: 30px;
+  }
 }
